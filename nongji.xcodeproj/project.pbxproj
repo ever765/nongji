@@ -102,6 +102,7 @@
 		D16B8B021E8E93BC00A4EA52 /* UIView+XC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XC.h"; sourceTree = "<group>"; };
 		D16B8B031E8E93BC00A4EA52 /* UIView+XC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XC.m"; sourceTree = "<group>"; };
 		D1A398A4B68020726F51C0AD /* Pods-nongji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nongji.release.xcconfig"; path = "Pods/Target Support Files/Pods-nongji/Pods-nongji.release.xcconfig"; sourceTree = "<group>"; };
+		D1FCE9E51E96701C00081A9B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +164,7 @@
 				D109A3FD1E89368200D9DCCA /* LaunchScreen.storyboard */,
 				D109A4001E89368200D9DCCA /* Info.plist */,
 				D109A3EF1E89368200D9DCCA /* Supporting Files */,
+				D1FCE9E51E96701C00081A9B /* PrefixHeader.pch */,
 			);
 			path = nongji;
 			sourceTree = "<group>";
@@ -586,6 +588,7 @@
 			baseConfigurationReference = 7BF243501ECD3EEC766CF1FC /* Pods-nongji.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/nongji/PrefixHeader.pch";
 				INFOPLIST_FILE = nongji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wdx.nongji;
@@ -598,6 +601,7 @@
 			baseConfigurationReference = D1A398A4B68020726F51C0AD /* Pods-nongji.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/nongji/PrefixHeader.pch";
 				INFOPLIST_FILE = nongji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wdx.nongji;
