@@ -9,13 +9,18 @@
 #import "NJAppViewController.h"
 
 @interface NJAppViewController ()
-
+{
+    UILabel *titleLable;
+    
+}
 @end
 
 @implementation NJAppViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBarHidden = YES;
+    
     // Do any additional setup after loading the view.
 }
 
@@ -23,7 +28,39 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//如果设置里。title。 表示有导航如果没有设置表示不需要导航
+- (void)setVcTitle:(NSString *)vcTitle{
+    _nvView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth(), 64)];
+    _nvView.backgroundColor = UIColorFromRGB(0xffffff);
+//    _nvView.alpha = 0.5;
+    //  根据内容和字体大小。结算label的宽高。
+    CGSize size = LabelSize(vcTitle, MainFontSize);
+    _titileLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0, size.width, size.height)];
+    _titileLabel.textColor = UIColorFromRGB(0x333333);
+    _titileLabel.center = CGPointMake(self.view.center.x, 42);
+    _titileLabel.text = vcTitle;
+    [_nvView addSubview:_titileLabel];
+    _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _backButton.frame = CGRectMake(ViewWidth(50), 25, ViewWidth(60), 35);
+    [_backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchDown];
+    [_nvView addSubview:_backButton];
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 63, ScreenWidth(), 1)];
+    lineView.backgroundColor = UIColorFromRGB(0xeeeeee);
+    [_nvView addSubview:lineView];
+    [self.view addSubview:_nvView];
+}
+//如果isBack设置为no，将_backButton 移除父试图；
+- (void)setIsBack:(BOOL )isBack{
+    if (_backButton) {
+        if (!isBack) {
+            [_backButton removeFromSuperview];
+        }
+    }
+}
 
+- (void)back{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 /*
 #pragma mark - Navigation
 

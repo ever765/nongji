@@ -15,6 +15,8 @@
 @implementation CollectViewController
 
 - (void)viewDidLoad {
+    self.vcTitle = @"我的收藏";
+    self.isBack = NO;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

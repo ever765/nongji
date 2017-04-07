@@ -39,6 +39,7 @@
         viewController.hidesBottomBarWhenPushed = YES;
         
         UIBarButtonItem *popToPreButton = [self barButtonItemWithImage:@"add" highImage:nil target:self action:@selector(popToPre)];
+
         viewController.navigationItem.leftBarButtonItem = popToPreButton;
     }
     [super pushViewController:viewController animated:animated];

@@ -4,7 +4,7 @@
 //
 //  Created by tobo on 17/3/27.
 //  Copyright © 2017年 WDX. All rights reserved.
-//
+//发布
 
 #import "IssueViewController.h"
 
@@ -15,10 +15,17 @@
 @implementation IssueViewController
 
 - (void)viewDidLoad {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(100, 100, 100, 100);
+    button.backgroundColor = UIColorFromRGB(0xeeeeee);
+    [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:button];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
+- (void)back{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

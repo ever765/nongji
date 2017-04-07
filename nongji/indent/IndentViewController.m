@@ -15,6 +15,8 @@
 @implementation IndentViewController
 
 - (void)viewDidLoad {
+    self.vcTitle = @"我的订单";
+    self.isBack = NO;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

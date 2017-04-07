@@ -15,6 +15,8 @@
 @implementation PersonViewController
 
 - (void)viewDidLoad {
+    self.vcTitle = @"个人中心";
+    self.isBack = NO;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

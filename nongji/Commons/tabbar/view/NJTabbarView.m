@@ -32,17 +32,22 @@
     
     return self;
 }
-
+//创建发布按钮
 - (void)SetupWriteButton{
     UIButton *writeButton = [UIButton new];
     writeButton.adjustsImageWhenHighlighted = NO;
     [writeButton setBackgroundImage:[UIImage imageNamed:@"add"] forState:UIControlStateNormal];
     [writeButton addTarget:self action:@selector(ClickWriteButton) forControlEvents:UIControlEventTouchUpInside];
     writeButton.bounds = CGRectMake(0, self.frame.size.height  + 10 - writeButton.currentBackgroundImage.size.height, writeButton.currentBackgroundImage.size.width, writeButton.currentBackgroundImage.size.height);
+    writeButton.backgroundColor = UIColorFromRGB(0xffffff);
+    writeButton.layer.masksToBounds = YES;
+    writeButton.layer.borderWidth = 4;
+    writeButton.layer.borderColor = UIColorFromRGB(0xeeeeee).CGColor;
+    writeButton.layer.cornerRadius = writeButton.bounds.size.height/2;
     [self addSubview:writeButton];
     _writeButton = writeButton;
 }
-
+//设置按钮的位置
 - (void)layoutSubviews{
     [super layoutSubviews];
     self.writeButton.center = CGPointMake(self.frame.size.width*0.5, _writeButton.center.y);
@@ -61,7 +66,7 @@
         tabBarBtn.tag = nIndex;
     }
 }
-
+//  添加
 - (void)addTabBarButtonWithTabBarItem:(UITabBarItem *)tabBarItem{
     NJTabbarButton *tabBarBtn = [[NJTabbarButton alloc] init];
     tabBarBtn.tabBarItem = tabBarItem;

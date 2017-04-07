@@ -15,7 +15,8 @@
 
 
 
-
+//百度地图Key
+#define MAPKEY @"4OjNk94MUqf6TTfna3Vz6uwPekubFBTA"
 //主体文字
 #define titleFontSize ScreenWidth()/375*16  //小标题内容大小  16号字体
 //导航标题大小 可更改
@@ -27,16 +28,12 @@
 
 //主题黑色字体
 #define mainFontBlack UIColorFromRGB(0x333333)
-
+//根据内容  字体大小。计算label的size
+#define LabelSize(content,fontSize) [content sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:fontSize],NSFontAttributeName,nil]]
 //主题vc背景色浅灰色
 #define mainBlackgroundColor  UIColorFromRGB(0xeeeeee)
 //导航栏背景色
 #define NAVBACKGORUNDCOLOR UIColorFromRGB(0xcc3333)
-
-
-
-
-
 
 
 
