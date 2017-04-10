@@ -2,12 +2,11 @@
 //  MyTools.m
 //  XiuCai
 //
-//  Created by 惊蛰 on 16/10/20.
+//  Created by tobo on 16/10/20.
 //  Copyright © 2016年 WDX. All rights reserved.
 //
 
 #import "MyTools.h"
-#import "RSAEncryptor.h"
 @implementation MyTools
 +(UIView *)lineView:(UIColor *)color :(CGRect)frame
 {
@@ -150,18 +149,18 @@
     }
     return dic;
 }
-//使用公钥字符串加密
-+(NSString *)openSSLencodeObject:(NSString *)jsonStr
-{
-   NSString *str= [RSAEncryptor encryptString:jsonStr publicKey:@"mykey"];
-    return str;
-}
-//使用私钥字符串解密
-
-+(NSString *)openSSLdecodeObject:(NSString *)jsonStr
-{
-   NSString *str= [RSAEncryptor decryptString:jsonStr privateKey:@"mykey"];
-    return str;
-
-}
+////使用公钥字符串加密
+//+(NSString *)openSSLencodeObject:(NSString *)jsonStr
+//{
+//   NSString *str= [RSAEncryptor encryptString:jsonStr publicKey:@"mykey"];
+//    return str;
+//}
+////使用私钥字符串解密
+//
+//+(NSString *)openSSLdecodeObject:(NSString *)jsonStr
+//{
+//   NSString *str= [RSAEncryptor decryptString:jsonStr privateKey:@"mykey"];
+//    return str;
+//
+//}
 @end
