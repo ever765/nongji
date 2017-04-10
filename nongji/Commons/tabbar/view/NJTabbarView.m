@@ -36,7 +36,7 @@
 - (void)SetupWriteButton{
     UIButton *writeButton = [UIButton new];
     writeButton.adjustsImageWhenHighlighted = NO;
-    [writeButton setBackgroundImage:[UIImage imageNamed:@"add"] forState:UIControlStateNormal];
+    [writeButton setBackgroundImage:[UIImage imageNamed:@"ic_action_release"] forState:UIControlStateNormal];
     [writeButton addTarget:self action:@selector(ClickWriteButton) forControlEvents:UIControlEventTouchUpInside];
     writeButton.bounds = CGRectMake(0, self.frame.size.height  + 10 - writeButton.currentBackgroundImage.size.height, writeButton.currentBackgroundImage.size.width, writeButton.currentBackgroundImage.size.height);
     writeButton.backgroundColor = UIColorFromRGB(0xffffff);

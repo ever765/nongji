@@ -25,13 +25,11 @@
 		C83877761E9B146600EFAAF3 /* ic_action_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = C838773E1E9B146600EFAAF3 /* ic_action_setting.png */; };
 		C83877771E9B146600EFAAF3 /* ic_action_sign.png in Resources */ = {isa = PBXBuildFile; fileRef = C838773F1E9B146600EFAAF3 /* ic_action_sign.png */; };
 		C83877781E9B146600EFAAF3 /* ic_ation_user.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877401E9B146600EFAAF3 /* ic_ation_user.png */; };
-		C83877791E9B146600EFAAF3 /* ic_collection.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877411E9B146600EFAAF3 /* ic_collection.png */; };
 		C838777A1E9B146600EFAAF3 /* ic_home.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877421E9B146600EFAAF3 /* ic_home.png */; };
 		C838777B1E9B146600EFAAF3 /* ic_homeed.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877431E9B146600EFAAF3 /* ic_homeed.png */; };
 		C838777C1E9B146600EFAAF3 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877441E9B146600EFAAF3 /* ic_launcher.png */; };
 		C838777D1E9B146600EFAAF3 /* ic_login.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877451E9B146600EFAAF3 /* ic_login.png */; };
 		C838777E1E9B146600EFAAF3 /* ic_more.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877461E9B146600EFAAF3 /* ic_more.png */; };
-		C838777F1E9B146600EFAAF3 /* ic_news.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877471E9B146600EFAAF3 /* ic_news.png */; };
 		C83877801E9B146600EFAAF3 /* ic_newsed.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877481E9B146600EFAAF3 /* ic_newsed.png */; };
 		C83877811E9B146600EFAAF3 /* ic_pwd.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877491E9B146600EFAAF3 /* ic_pwd.png */; };
 		C83877821E9B146600EFAAF3 /* ic_return.png in Resources */ = {isa = PBXBuildFile; fileRef = C838774A1E9B146600EFAAF3 /* ic_return.png */; };
@@ -52,13 +50,11 @@
 		C83877911E9B146700EFAAF3 /* ic_action_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = C838775A1E9B146600EFAAF3 /* ic_action_setting.png */; };
 		C83877921E9B146700EFAAF3 /* ic_action_sign.png in Resources */ = {isa = PBXBuildFile; fileRef = C838775B1E9B146600EFAAF3 /* ic_action_sign.png */; };
 		C83877931E9B146700EFAAF3 /* ic_ation_user.png in Resources */ = {isa = PBXBuildFile; fileRef = C838775C1E9B146600EFAAF3 /* ic_ation_user.png */; };
-		C83877941E9B146700EFAAF3 /* ic_collection.png in Resources */ = {isa = PBXBuildFile; fileRef = C838775D1E9B146600EFAAF3 /* ic_collection.png */; };
 		C83877951E9B146700EFAAF3 /* ic_home.png in Resources */ = {isa = PBXBuildFile; fileRef = C838775E1E9B146600EFAAF3 /* ic_home.png */; };
 		C83877961E9B146700EFAAF3 /* ic_homeed.png in Resources */ = {isa = PBXBuildFile; fileRef = C838775F1E9B146600EFAAF3 /* ic_homeed.png */; };
 		C83877971E9B146700EFAAF3 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877601E9B146600EFAAF3 /* ic_launcher.png */; };
 		C83877981E9B146700EFAAF3 /* ic_login.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877611E9B146600EFAAF3 /* ic_login.png */; };
 		C83877991E9B146700EFAAF3 /* ic_more.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877621E9B146600EFAAF3 /* ic_more.png */; };
-		C838779A1E9B146700EFAAF3 /* ic_news.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877631E9B146600EFAAF3 /* ic_news.png */; };
 		C838779B1E9B146700EFAAF3 /* ic_newsed.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877641E9B146600EFAAF3 /* ic_newsed.png */; };
 		C838779C1E9B146700EFAAF3 /* ic_person1.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877651E9B146600EFAAF3 /* ic_person1.png */; };
 		C838779D1E9B146700EFAAF3 /* ic_person_ed1.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877661E9B146600EFAAF3 /* ic_person_ed1.png */; };
@@ -73,7 +69,6 @@
 		D109A3F11E89368200D9DCCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D109A3F01E89368200D9DCCA /* main.m */; };
 		D109A3F41E89368200D9DCCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D109A3F31E89368200D9DCCA /* AppDelegate.m */; };
 		D109A3F71E89368200D9DCCA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D109A3F61E89368200D9DCCA /* ViewController.m */; };
-		D109A3FA1E89368200D9DCCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D109A3F81E89368200D9DCCA /* Main.storyboard */; };
 		D109A3FC1E89368200D9DCCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D109A3FB1E89368200D9DCCA /* Assets.xcassets */; };
 		D109A3FF1E89368200D9DCCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D109A3FD1E89368200D9DCCA /* LaunchScreen.storyboard */; };
 		D109AF3D1E89397700D9DCCA /* NJAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AF3C1E89397700D9DCCA /* NJAppViewController.m */; };
@@ -105,6 +100,7 @@
 		D16B8B041E8E93BC00A4EA52 /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = D16B8AFF1E8E93BC00A4EA52 /* NSString+Common.m */; };
 		D16B8B051E8E93BC00A4EA52 /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = D16B8B011E8E93BC00A4EA52 /* UIView+Common.m */; };
 		D16B8B061E8E93BC00A4EA52 /* UIView+XC.m in Sources */ = {isa = PBXBuildFile; fileRef = D16B8B031E8E93BC00A4EA52 /* UIView+XC.m */; };
+		D1EFBE8F1E9BCE9800C38E80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D109A3F81E89368200D9DCCA /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,13 +127,11 @@
 		C838773E1E9B146600EFAAF3 /* ic_action_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_setting.png; sourceTree = "<group>"; };
 		C838773F1E9B146600EFAAF3 /* ic_action_sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_sign.png; sourceTree = "<group>"; };
 		C83877401E9B146600EFAAF3 /* ic_ation_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_ation_user.png; sourceTree = "<group>"; };
-		C83877411E9B146600EFAAF3 /* ic_collection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_collection.png; sourceTree = "<group>"; };
 		C83877421E9B146600EFAAF3 /* ic_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_home.png; sourceTree = "<group>"; };
 		C83877431E9B146600EFAAF3 /* ic_homeed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_homeed.png; sourceTree = "<group>"; };
 		C83877441E9B146600EFAAF3 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		C83877451E9B146600EFAAF3 /* ic_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_login.png; sourceTree = "<group>"; };
 		C83877461E9B146600EFAAF3 /* ic_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_more.png; sourceTree = "<group>"; };
-		C83877471E9B146600EFAAF3 /* ic_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_news.png; sourceTree = "<group>"; };
 		C83877481E9B146600EFAAF3 /* ic_newsed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_newsed.png; sourceTree = "<group>"; };
 		C83877491E9B146600EFAAF3 /* ic_pwd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_pwd.png; sourceTree = "<group>"; };
 		C838774A1E9B146600EFAAF3 /* ic_return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_return.png; sourceTree = "<group>"; };
@@ -158,13 +152,11 @@
 		C838775A1E9B146600EFAAF3 /* ic_action_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_setting.png; sourceTree = "<group>"; };
 		C838775B1E9B146600EFAAF3 /* ic_action_sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_sign.png; sourceTree = "<group>"; };
 		C838775C1E9B146600EFAAF3 /* ic_ation_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_ation_user.png; sourceTree = "<group>"; };
-		C838775D1E9B146600EFAAF3 /* ic_collection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_collection.png; sourceTree = "<group>"; };
 		C838775E1E9B146600EFAAF3 /* ic_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_home.png; sourceTree = "<group>"; };
 		C838775F1E9B146600EFAAF3 /* ic_homeed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_homeed.png; sourceTree = "<group>"; };
 		C83877601E9B146600EFAAF3 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		C83877611E9B146600EFAAF3 /* ic_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_login.png; sourceTree = "<group>"; };
 		C83877621E9B146600EFAAF3 /* ic_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_more.png; sourceTree = "<group>"; };
-		C83877631E9B146600EFAAF3 /* ic_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_news.png; sourceTree = "<group>"; };
 		C83877641E9B146600EFAAF3 /* ic_newsed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_newsed.png; sourceTree = "<group>"; };
 		C83877651E9B146600EFAAF3 /* ic_person1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_person1.png; sourceTree = "<group>"; };
 		C83877661E9B146600EFAAF3 /* ic_person_ed1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_person_ed1.png; sourceTree = "<group>"; };
@@ -295,13 +287,11 @@
 				C838773E1E9B146600EFAAF3 /* ic_action_setting.png */,
 				C838773F1E9B146600EFAAF3 /* ic_action_sign.png */,
 				C83877401E9B146600EFAAF3 /* ic_ation_user.png */,
-				C83877411E9B146600EFAAF3 /* ic_collection.png */,
 				C83877421E9B146600EFAAF3 /* ic_home.png */,
 				C83877431E9B146600EFAAF3 /* ic_homeed.png */,
 				C83877441E9B146600EFAAF3 /* ic_launcher.png */,
 				C83877451E9B146600EFAAF3 /* ic_login.png */,
 				C83877461E9B146600EFAAF3 /* ic_more.png */,
-				C83877471E9B146600EFAAF3 /* ic_news.png */,
 				C83877481E9B146600EFAAF3 /* ic_newsed.png */,
 				C83877491E9B146600EFAAF3 /* ic_pwd.png */,
 				C838774A1E9B146600EFAAF3 /* ic_return.png */,
@@ -329,13 +319,11 @@
 				C838775A1E9B146600EFAAF3 /* ic_action_setting.png */,
 				C838775B1E9B146600EFAAF3 /* ic_action_sign.png */,
 				C838775C1E9B146600EFAAF3 /* ic_ation_user.png */,
-				C838775D1E9B146600EFAAF3 /* ic_collection.png */,
 				C838775E1E9B146600EFAAF3 /* ic_home.png */,
 				C838775F1E9B146600EFAAF3 /* ic_homeed.png */,
 				C83877601E9B146600EFAAF3 /* ic_launcher.png */,
 				C83877611E9B146600EFAAF3 /* ic_login.png */,
 				C83877621E9B146600EFAAF3 /* ic_more.png */,
-				C83877631E9B146600EFAAF3 /* ic_news.png */,
 				C83877641E9B146600EFAAF3 /* ic_newsed.png */,
 				C83877651E9B146600EFAAF3 /* ic_person1.png */,
 				C83877661E9B146600EFAAF3 /* ic_person_ed1.png */,
@@ -582,6 +570,7 @@
 				TargetAttributes = {
 					D109A3EB1E89368200D9DCCA = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = MPLC36J94A;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -609,6 +598,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1EFBE8F1E9BCE9800C38E80 /* Main.storyboard in Resources */,
 				C838778F1E9B146700EFAAF3 /* ic_action_record.png in Resources */,
 				C83877961E9B146700EFAAF3 /* ic_homeed.png in Resources */,
 				D16B8AE11E8E927B00A4EA52 /* lb_ic_user.png in Resources */,
@@ -623,7 +613,6 @@
 				C83877911E9B146700EFAAF3 /* ic_action_setting.png in Resources */,
 				C838776D1E9B146600EFAAF3 /* ic_action_integral.png in Resources */,
 				C83877751E9B146600EFAAF3 /* ic_action_right.png in Resources */,
-				C838777F1E9B146600EFAAF3 /* ic_news.png in Resources */,
 				C83877731E9B146600EFAAF3 /* ic_action_record1.png in Resources */,
 				C83877701E9B146600EFAAF3 /* ic_action_position.png in Resources */,
 				D16B8AE21E8E927B00A4EA52 /* lb_ic_woman.png in Resources */,
@@ -652,7 +641,6 @@
 				C83877831E9B146600EFAAF3 /* ic_user.png in Resources */,
 				C83877741E9B146600EFAAF3 /* ic_action_release.png in Resources */,
 				C838777A1E9B146600EFAAF3 /* ic_home.png in Resources */,
-				C83877941E9B146700EFAAF3 /* ic_collection.png in Resources */,
 				C838776F1E9B146600EFAAF3 /* ic_action_left.png in Resources */,
 				C83877721E9B146600EFAAF3 /* ic_action_record.png in Resources */,
 				C838778B1E9B146700EFAAF3 /* ic_action_integral.png in Resources */,
@@ -666,15 +654,12 @@
 				D16B8AE31E8E927B00A4EA52 /* switch_off.png in Resources */,
 				C83877871E9B146600EFAAF3 /* lb_ic_cancel.png in Resources */,
 				C838776C1E9B146600EFAAF3 /* ic_action_collection.png in Resources */,
-				C83877791E9B146600EFAAF3 /* ic_collection.png in Resources */,
 				C838779C1E9B146700EFAAF3 /* ic_person1.png in Resources */,
 				C838779F1E9B146700EFAAF3 /* ic_return.png in Resources */,
 				C83877771E9B146600EFAAF3 /* ic_action_sign.png in Resources */,
 				C83877811E9B146600EFAAF3 /* ic_pwd.png in Resources */,
-				C838779A1E9B146700EFAAF3 /* ic_news.png in Resources */,
 				D109A3FC1E89368200D9DCCA /* Assets.xcassets in Resources */,
 				C83877901E9B146700EFAAF3 /* ic_action_release.png in Resources */,
-				D109A3FA1E89368200D9DCCA /* Main.storyboard in Resources */,
 				C83877851E9B146600EFAAF3 /* ice_collectioned.png in Resources */,
 				C83877821E9B146600EFAAF3 /* ic_return.png in Resources */,
 				C83877A11E9B146700EFAAF3 /* ic_usered.png in Resources */,
@@ -884,6 +869,7 @@
 			baseConfigurationReference = 7BF243501ECD3EEC766CF1FC /* Pods-nongji.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MPLC36J94A;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/nongji/PrefixHeader.pch";
 				INFOPLIST_FILE = nongji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -897,6 +883,7 @@
 			baseConfigurationReference = D1A398A4B68020726F51C0AD /* Pods-nongji.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MPLC36J94A;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/nongji/PrefixHeader.pch";
 				INFOPLIST_FILE = nongji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
