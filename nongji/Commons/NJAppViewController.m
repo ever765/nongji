@@ -40,10 +40,15 @@
     _titileLabel.center = CGPointMake(self.view.center.x, 42);
     _titileLabel.text = vcTitle;
     [_nvView addSubview:_titileLabel];
-    _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _backButton.frame = CGRectMake(ViewWidth(50), 25, ViewWidth(60), 35);
-    [_backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchDown];
+    UIImage *image=[UIImage imageNamed:@"left"];
+    _backButton=[UIButton buttonWithType:UIButtonTypeCustom];
+    [_backButton setImage:image forState:UIControlStateNormal];
+    _backButton.bounds=CGRectMake(0, 0, 50, 100);
+    _backButton.center=CGPointMake(_backButton.bounds.size.width*0.5, _titileLabel.center.y);
+    _backButton.imageEdgeInsets=UIEdgeInsetsMake(0.5*(_backButton.bounds.size.height-image.size.height),0, 0.5*(_backButton.bounds.size.height-image.size.height), _backButton.bounds.size.width-image.size.width-20);
+    [_backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [_nvView addSubview:_backButton];
+    
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 63, ScreenWidth(), 1)];
     lineView.backgroundColor = UIColorFromRGB(0xeeeeee);
     [_nvView addSubview:lineView];

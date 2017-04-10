@@ -8,6 +8,9 @@
 
 #import "NJAppViewController.h"
 
-@interface BaseViewController : NJAppViewController
+@interface BaseViewController : NJAppViewController<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
+{
+    UITableView *_tableView;
+}
 
 @end

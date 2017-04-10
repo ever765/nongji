@@ -35,6 +35,8 @@
 //导航栏背景色
 #define NAVBACKGORUNDCOLOR UIColorFromRGB(0xcc3333)
 
+//分割线颜色
+#define LINECOLOR UIColorFromRGB(0xeeeeee)
 
 
 #pragma mark 据说此方法真机不打印nslog 调试打印节省性能

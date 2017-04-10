@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface InformationTableViewCell : UITableViewCell
+//根据index   显示不同的内容
+- (void)drewContentViewWithIndexPathRRow:(NSInteger)index;
 
 @end

@@ -69,6 +69,9 @@
     [_nvView addSubview: button];
 }
 
+- (void)createTableView{
+}
+
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [_mapView viewWillAppear];

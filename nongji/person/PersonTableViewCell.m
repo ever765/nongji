@@ -36,7 +36,7 @@
     [self.contentView addSubview:_rightImageView];
     
     _downLineView = [[UIView alloc] init];
-    _downLineView.backgroundColor = UIColorFromRGB(0xeeeeee);
+    _downLineView.backgroundColor = LINECOLOR;
     [self.contentView addSubview:_downLineView];
 }
 
