@@ -9,6 +9,7 @@
 #import "PersonViewController.h"
 #import "PersonTableViewCell.h"
 #import "InformationViewController.h"
+#import "MySetViewController.h"
 @interface PersonViewController ()
 {
     UIView *_headerView;//tableview的headerView
@@ -71,6 +72,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         InformationViewController *vc = [[InformationViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 3){
+        MySetViewController *vc = [[MySetViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

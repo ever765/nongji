@@ -103,6 +103,9 @@
 		D16B8B051E8E93BC00A4EA52 /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = D16B8B011E8E93BC00A4EA52 /* UIView+Common.m */; };
 		D16B8B061E8E93BC00A4EA52 /* UIView+XC.m in Sources */ = {isa = PBXBuildFile; fileRef = D16B8B031E8E93BC00A4EA52 /* UIView+XC.m */; };
 		D1EFBE8F1E9BCE9800C38E80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D109A3F81E89368200D9DCCA /* Main.storyboard */; };
+		D1F43C1E1E9D0D1E003DE9BA /* MySetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F43C1D1E9D0D1E003DE9BA /* MySetViewController.m */; };
+		D1F43C211E9D0DF4003DE9BA /* MySetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F43C201E9D0DF4003DE9BA /* MySetTableViewCell.m */; };
+		D1F43C241E9D17EB003DE9BA /* AboutAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F43C231E9D17EB003DE9BA /* AboutAppViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -231,6 +234,12 @@
 		D16B8B021E8E93BC00A4EA52 /* UIView+XC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XC.h"; sourceTree = "<group>"; };
 		D16B8B031E8E93BC00A4EA52 /* UIView+XC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XC.m"; sourceTree = "<group>"; };
 		D1A398A4B68020726F51C0AD /* Pods-nongji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nongji.release.xcconfig"; path = "Pods/Target Support Files/Pods-nongji/Pods-nongji.release.xcconfig"; sourceTree = "<group>"; };
+		D1F43C1C1E9D0D1E003DE9BA /* MySetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySetViewController.h; sourceTree = "<group>"; };
+		D1F43C1D1E9D0D1E003DE9BA /* MySetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySetViewController.m; sourceTree = "<group>"; };
+		D1F43C1F1E9D0DF4003DE9BA /* MySetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySetTableViewCell.h; sourceTree = "<group>"; };
+		D1F43C201E9D0DF4003DE9BA /* MySetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySetTableViewCell.m; sourceTree = "<group>"; };
+		D1F43C221E9D17EB003DE9BA /* AboutAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutAppViewController.h; sourceTree = "<group>"; };
+		D1F43C231E9D17EB003DE9BA /* AboutAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutAppViewController.m; sourceTree = "<group>"; };
 		D1FCE9E51E96701C00081A9B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -255,7 +264,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		C83877241E9B144D00EFAAF3 /* view */ = {
+		C83877241E9B144D00EFAAF3 /* information */ = {
 			isa = PBXGroup;
 			children = (
 				C83877251E9B144D00EFAAF3 /* ChangePhoneController.h */,
@@ -267,6 +276,7 @@
 				C81F169F1E9CCCB000400785 /* ChangePasswordViewController.h */,
 				C81F16A01E9CCCB000400785 /* ChangePasswordViewController.m */,
 			);
+			name = information;
 			path = view;
 			sourceTree = "<group>";
 		};
@@ -437,11 +447,12 @@
 		D109AF381E8938ED00D9DCCA /* person */ = {
 			isa = PBXGroup;
 			children = (
-				C83877241E9B144D00EFAAF3 /* view */,
-				C83877221E9B144D00EFAAF3 /* PersonTableViewCell.h */,
-				C83877231E9B144D00EFAAF3 /* PersonTableViewCell.m */,
 				D109AF4D1E8939D300D9DCCA /* PersonViewController.h */,
 				D109AF4E1E8939D300D9DCCA /* PersonViewController.m */,
+				C83877221E9B144D00EFAAF3 /* PersonTableViewCell.h */,
+				C83877231E9B144D00EFAAF3 /* PersonTableViewCell.m */,
+				C83877241E9B144D00EFAAF3 /* information */,
+				D1F43C1B1E9D0D00003DE9BA /* MySet */,
 			);
 			path = person;
 			sourceTree = "<group>";
@@ -536,6 +547,19 @@
 				D16B8B031E8E93BC00A4EA52 /* UIView+XC.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		D1F43C1B1E9D0D00003DE9BA /* MySet */ = {
+			isa = PBXGroup;
+			children = (
+				D1F43C1C1E9D0D1E003DE9BA /* MySetViewController.h */,
+				D1F43C1D1E9D0D1E003DE9BA /* MySetViewController.m */,
+				D1F43C1F1E9D0DF4003DE9BA /* MySetTableViewCell.h */,
+				D1F43C201E9D0DF4003DE9BA /* MySetTableViewCell.m */,
+				D1F43C221E9D17EB003DE9BA /* AboutAppViewController.h */,
+				D1F43C231E9D17EB003DE9BA /* AboutAppViewController.m */,
+			);
+			path = MySet;
 			sourceTree = "<group>";
 		};
 		DEB7EB7E15F6B31669F44554 /* Frameworks */ = {
@@ -737,6 +761,7 @@
 			files = (
 				C851D74F1E9B7E7400DCF7E1 /* MoreUserListConteoller.m in Sources */,
 				D109AF491E8939BB00D9DCCA /* IssueViewController.m in Sources */,
+				D1F43C241E9D17EB003DE9BA /* AboutAppViewController.m in Sources */,
 				D109AF461E8939AF00D9DCCA /* IndentViewController.m in Sources */,
 				C838772D1E9B144D00EFAAF3 /* PersonTableViewCell.m in Sources */,
 				C83877A81E9B14A400EFAAF3 /* MyTools.m in Sources */,
@@ -755,7 +780,9 @@
 				D16B8AFB1E8E932E00A4EA52 /* NJTabbarButton.m in Sources */,
 				C838772F1E9B144D00EFAAF3 /* InformationTableViewCell.m in Sources */,
 				D109AF4C1E8939C700D9DCCA /* CollectViewController.m in Sources */,
+				D1F43C211E9D0DF4003DE9BA /* MySetTableViewCell.m in Sources */,
 				D16B8AFA1E8E932E00A4EA52 /* NJTabbarViewController.m in Sources */,
+				D1F43C1E1E9D0D1E003DE9BA /* MySetViewController.m in Sources */,
 				C838772E1E9B144D00EFAAF3 /* ChangePhoneController.m in Sources */,
 				D16B8AF91E8E932E00A4EA52 /* NJNVViewController.m in Sources */,
 				C83877A51E9B148500EFAAF3 /* BaseModel.m in Sources */,

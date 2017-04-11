@@ -15,6 +15,7 @@
 @implementation IssueViewController
 
 - (void)viewDidLoad {
+    self.vcTitle = @"发布订单";
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(100, 100, 100, 100);
     button.backgroundColor = UIColorFromRGB(0xeeeeee);
@@ -22,6 +23,9 @@
     [self.view addSubview:button];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)createTableView{
 }
 - (void)back{
     [self dismissViewControllerAnimated:YES completion:nil];
