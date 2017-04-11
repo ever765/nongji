@@ -8,6 +8,7 @@
 
 #import "InformationTableViewCell.h"
 
+#define ViewFrameOriginX ViewWidth(50)
 @interface InformationTableViewCell ()<UIGestureRecognizerDelegate>
 {
     UILabel *_titleLabel;
@@ -68,14 +69,16 @@
     [super layoutSubviews];
     
     CGSize size = LabelSize(_titleLabel.text, titleFontSize);
-    _titleLabel.frame = CGRectMake(ViewWidth(50), ViewWidth(10), size.width, size.height);
+    _titleLabel.frame = CGRectMake(ViewFrameOriginX, ViewWidth(10), size.width, size.height);
     if (_index == 0) {
         _titleLabel.font = [UIFont boldSystemFontOfSize:titleFontSize + 2];
         size = LabelSize(_titleLabel.text, titleFontSize+2);
-        _titleLabel.frame = CGRectMake(ViewWidth(50), ViewWidth(10), size.width, size.height);
+        _titleLabel.frame = CGRectMake(ViewFrameOriginX, ViewWidth(10), size.width, size.height);
     }else if (_index == 1){
-        _titleLabel.frame = CGRectMake(ViewWidth(50), self.contentView.center.y - size.height/2, size.width, size.height);
-        _headerImageView.frame = CGRectMake(ScreenWidth() - ViewWidth(170), self.contentView.center.y - ViewWidth(70), ViewWidth(140), ViewWidth(140));
+        _titleLabel.frame = CGRectMake(ViewFrameOriginX, self.contentView.center.y - size.height/2, size.width, size.height);
+        _headerImageView.frame = CGRectMake(ScreenWidth() - ViewWidth(190), self.contentView.center.y - ViewWidth(70), ViewWidth(140), ViewWidth(140));
+        _headerImageView.layer.cornerRadius = ViewWidth(70);
+        _headerImageView.layer.masksToBounds = YES;
     }
     if (_index == 2 || _index == 3) {
         size = LabelSize(_contentLabel.text, titleFontSize);
@@ -84,7 +87,7 @@
     if (_index == 3) {
         _rightImageView.frame = CGRectMake(MaxX(_contentLabel) + ViewWidth(20), MaxY(_contentLabel) - ViewWidth(30), ViewWidth(13), ViewWidth(30));
     }
-    _lineView.frame = CGRectMake(ViewWidth(50),MaxY(self.contentView) - ViewWidth(1) , ScreenWidth() - ViewWidth(50), ViewWidth(1));
+    _lineView.frame = CGRectMake(ViewFrameOriginX,MaxY(self.contentView) - ViewWidth(1) , ScreenWidth() - ViewWidth(50), ViewWidth(1));
     if (_index == 4) {
         _lineView.frame = CGRectMake(0, 0, 0, 0);
         _cardImageView.frame = CGRectMake(MaxX(_titleLabel) - ViewWidth(30), MaxY(_titleLabel) + ViewWidth(20), ScreenWidth() - (MaxX(_titleLabel) - ViewWidth(30))*2, (ScreenWidth() - (MaxX(_titleLabel) - ViewWidth(30))*2)/4*3);

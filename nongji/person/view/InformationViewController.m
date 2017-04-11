@@ -8,6 +8,7 @@
 
 #import "InformationViewController.h"
 #import "InformationTableViewCell.h"
+#import "ChangePhoneController.h"
 @interface InformationViewController ()
 
 @end
@@ -51,7 +52,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 3) {
-        InformationViewController *vc = [[InformationViewController alloc] init];
+        ChangePhoneController  *vc = [[ChangePhoneController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

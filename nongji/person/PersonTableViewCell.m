@@ -8,6 +8,8 @@
 
 #import "PersonTableViewCell.h"
 
+#define ViewFrameOriginX ViewWidth(88)
+
 @interface PersonTableViewCell ()
 {
     UIImageView *_imageView;
@@ -51,16 +53,14 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     
-    _imageView.frame = CGRectMake(ViewWidth(88), ViewWidth(10), ViewWidth(60), ViewWidth(60));
+    _imageView.frame = CGRectMake(ViewFrameOriginX, ViewWidth(10), ViewWidth(60), ViewWidth(60));
     
     CGSize size = LabelSize(_titleLabel.text, titleFontSize);
     _titleLabel.frame = CGRectMake(MaxX(_imageView)  + ViewWidth(20), MaxY(_imageView) - size.height, size.width, size.height);
     
     _rightImageView.frame = CGRectMake(ScreenWidth() - ViewWidth(50) , MaxY(_imageView) - ViewWidth(30), ViewWidth(13), ViewWidth(30));
     
-    _downLineView.frame = CGRectMake(ViewWidth(88),MaxY(_imageView)  + ViewWidth(10) , ScreenWidth() - ViewWidth(118), ViewWidth(1));
-    
-    
+    _downLineView.frame = CGRectMake(ViewFrameOriginX,MaxY(_imageView)  + ViewWidth(10) , ScreenWidth() - ViewWidth(118), ViewWidth(1));
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

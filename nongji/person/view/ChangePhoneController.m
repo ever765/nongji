@@ -15,6 +15,7 @@
 @implementation ChangePhoneController
 
 - (void)viewDidLoad {
+    self.vcTitle = @"更改手机号";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
