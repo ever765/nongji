@@ -25,11 +25,11 @@
     self.isBack = NO;
     [super viewDidLoad];
     [self registerCellID];
-    [self creaateHeaderView];
+    [self createHeaderView];
     // Do any additional setup after loading the view.
 }
 
-- (void)creaateHeaderView{
+- (void)createHeaderView{
     _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth(), ViewWidth(256))];
     _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(ViewWidth(88), ViewWidth(58), ViewWidth(140), ViewWidth(140))];
     _imageView.image = [UIImage imageNamed:@"ic_action_integral"];
