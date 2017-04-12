@@ -31,7 +31,7 @@
 //如果设置里。title。 表示有导航如果没有设置表示不需要导航
 - (void)setVcTitle:(NSString *)vcTitle{
     _nvView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth(), 64)];
-    _nvView.backgroundColor = UIColorFromRGB(0x888888);
+    _nvView.backgroundColor = [UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.1];
     //  根据内容和字体大小。结算label的宽高。
     CGSize size = LabelSize(vcTitle, MainFontSize);
     _titileLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0, size.width, size.height)];

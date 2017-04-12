@@ -8,11 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5944CF20CA88DBD99CF0823F /* libPods-nongji.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 212C09C509050AF7762E5E25 /* libPods-nongji.a */; };
-		C81F16A11E9CCCB000400785 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C81F16A01E9CCCB000400785 /* ChangePasswordViewController.m */; };
 		C838772D1E9B144D00EFAAF3 /* PersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C83877231E9B144D00EFAAF3 /* PersonTableViewCell.m */; };
-		C838772E1E9B144D00EFAAF3 /* ChangePhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = C83877261E9B144D00EFAAF3 /* ChangePhoneController.m */; };
-		C838772F1E9B144D00EFAAF3 /* InformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C83877281E9B144D00EFAAF3 /* InformationTableViewCell.m */; };
-		C83877301E9B144D00EFAAF3 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C838772A1E9B144D00EFAAF3 /* InformationViewController.m */; };
 		C838776C1E9B146600EFAAF3 /* ic_action_collection.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877341E9B146600EFAAF3 /* ic_action_collection.png */; };
 		C838776D1E9B146600EFAAF3 /* ic_action_integral.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877351E9B146600EFAAF3 /* ic_action_integral.png */; };
 		C838776E1E9B146600EFAAF3 /* ic_action_jifen.png in Resources */ = {isa = PBXBuildFile; fileRef = C83877361E9B146600EFAAF3 /* ic_action_jifen.png */; };
@@ -68,6 +64,13 @@
 		C83877A81E9B14A400EFAAF3 /* MyTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C83877A71E9B14A400EFAAF3 /* MyTools.m */; };
 		C851D74F1E9B7E7400DCF7E1 /* MoreUserListConteoller.m in Sources */ = {isa = PBXBuildFile; fileRef = C851D74E1E9B7E7400DCF7E1 /* MoreUserListConteoller.m */; };
 		C851D7521E9C6A2200DCF7E1 /* NsTime.m in Sources */ = {isa = PBXBuildFile; fileRef = C851D7511E9C6A2200DCF7E1 /* NsTime.m */; };
+		C86D57DD1E9DFB0B0053CB29 /* HistoricalOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86D57DC1E9DFB0B0053CB29 /* HistoricalOrderViewController.m */; };
+		C86D57E71E9DFC830053CB29 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86D57E01E9DFC830053CB29 /* ChangePasswordViewController.m */; };
+		C86D57E81E9DFC830053CB29 /* ChangePhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86D57E21E9DFC830053CB29 /* ChangePhoneController.m */; };
+		C86D57E91E9DFC830053CB29 /* InformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C86D57E41E9DFC830053CB29 /* InformationTableViewCell.m */; };
+		C86D57EA1E9DFC830053CB29 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C86D57E61E9DFC830053CB29 /* InformationViewController.m */; };
+		C86D57ED1E9DFDCE0053CB29 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C86D57EC1E9DFDCE0053CB29 /* CustomButton.m */; };
+		C86D57F01E9E04EE0053CB29 /* HistoricalOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C86D57EF1E9E04EE0053CB29 /* HistoricalOrderTableViewCell.m */; };
 		D109A3F11E89368200D9DCCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D109A3F01E89368200D9DCCA /* main.m */; };
 		D109A3F41E89368200D9DCCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D109A3F31E89368200D9DCCA /* AppDelegate.m */; };
 		D109A3F71E89368200D9DCCA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D109A3F61E89368200D9DCCA /* ViewController.m */; };
@@ -111,16 +114,8 @@
 /* Begin PBXFileReference section */
 		212C09C509050AF7762E5E25 /* libPods-nongji.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nongji.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BF243501ECD3EEC766CF1FC /* Pods-nongji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nongji.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nongji/Pods-nongji.debug.xcconfig"; sourceTree = "<group>"; };
-		C81F169F1E9CCCB000400785 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
-		C81F16A01E9CCCB000400785 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
 		C83877221E9B144D00EFAAF3 /* PersonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonTableViewCell.h; sourceTree = "<group>"; };
 		C83877231E9B144D00EFAAF3 /* PersonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTableViewCell.m; sourceTree = "<group>"; };
-		C83877251E9B144D00EFAAF3 /* ChangePhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePhoneController.h; sourceTree = "<group>"; };
-		C83877261E9B144D00EFAAF3 /* ChangePhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePhoneController.m; sourceTree = "<group>"; };
-		C83877271E9B144D00EFAAF3 /* InformationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationTableViewCell.h; sourceTree = "<group>"; };
-		C83877281E9B144D00EFAAF3 /* InformationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationTableViewCell.m; sourceTree = "<group>"; };
-		C83877291E9B144D00EFAAF3 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
-		C838772A1E9B144D00EFAAF3 /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
 		C83877341E9B146600EFAAF3 /* ic_action_collection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_collection.png; sourceTree = "<group>"; };
 		C83877351E9B146600EFAAF3 /* ic_action_integral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_integral.png; sourceTree = "<group>"; };
 		C83877361E9B146600EFAAF3 /* ic_action_jifen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_jifen.png; sourceTree = "<group>"; };
@@ -180,6 +175,20 @@
 		C851D74E1E9B7E7400DCF7E1 /* MoreUserListConteoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreUserListConteoller.m; sourceTree = "<group>"; };
 		C851D7501E9C6A2200DCF7E1 /* NsTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NsTime.h; sourceTree = "<group>"; };
 		C851D7511E9C6A2200DCF7E1 /* NsTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NsTime.m; sourceTree = "<group>"; };
+		C86D57DB1E9DFB0B0053CB29 /* HistoricalOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoricalOrderViewController.h; sourceTree = "<group>"; };
+		C86D57DC1E9DFB0B0053CB29 /* HistoricalOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoricalOrderViewController.m; sourceTree = "<group>"; };
+		C86D57DF1E9DFC830053CB29 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		C86D57E01E9DFC830053CB29 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		C86D57E11E9DFC830053CB29 /* ChangePhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePhoneController.h; sourceTree = "<group>"; };
+		C86D57E21E9DFC830053CB29 /* ChangePhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePhoneController.m; sourceTree = "<group>"; };
+		C86D57E31E9DFC830053CB29 /* InformationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationTableViewCell.h; sourceTree = "<group>"; };
+		C86D57E41E9DFC830053CB29 /* InformationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationTableViewCell.m; sourceTree = "<group>"; };
+		C86D57E51E9DFC830053CB29 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
+		C86D57E61E9DFC830053CB29 /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
+		C86D57EB1E9DFDCE0053CB29 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		C86D57EC1E9DFDCE0053CB29 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		C86D57EE1E9E04EE0053CB29 /* HistoricalOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoricalOrderTableViewCell.h; sourceTree = "<group>"; };
+		C86D57EF1E9E04EE0053CB29 /* HistoricalOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoricalOrderTableViewCell.m; sourceTree = "<group>"; };
 		D109A3EC1E89368200D9DCCA /* nongji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nongji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D109A3F01E89368200D9DCCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D109A3F21E89368200D9DCCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -264,22 +273,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		C83877241E9B144D00EFAAF3 /* information */ = {
-			isa = PBXGroup;
-			children = (
-				C83877251E9B144D00EFAAF3 /* ChangePhoneController.h */,
-				C83877261E9B144D00EFAAF3 /* ChangePhoneController.m */,
-				C83877271E9B144D00EFAAF3 /* InformationTableViewCell.h */,
-				C83877281E9B144D00EFAAF3 /* InformationTableViewCell.m */,
-				C83877291E9B144D00EFAAF3 /* InformationViewController.h */,
-				C838772A1E9B144D00EFAAF3 /* InformationViewController.m */,
-				C81F169F1E9CCCB000400785 /* ChangePasswordViewController.h */,
-				C81F16A01E9CCCB000400785 /* ChangePasswordViewController.m */,
-			);
-			name = information;
-			path = view;
-			sourceTree = "<group>";
-		};
 		C83877321E9B146600EFAAF3 /* res */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +345,32 @@
 				C838776B1E9B146600EFAAF3 /* ice_collectioned.png */,
 			);
 			path = "mipmap-mdpi";
+			sourceTree = "<group>";
+		};
+		C86D57DA1E9DFAB70053CB29 /* historyIndent */ = {
+			isa = PBXGroup;
+			children = (
+				C86D57DB1E9DFB0B0053CB29 /* HistoricalOrderViewController.h */,
+				C86D57DC1E9DFB0B0053CB29 /* HistoricalOrderViewController.m */,
+				C86D57EE1E9E04EE0053CB29 /* HistoricalOrderTableViewCell.h */,
+				C86D57EF1E9E04EE0053CB29 /* HistoricalOrderTableViewCell.m */,
+			);
+			path = historyIndent;
+			sourceTree = "<group>";
+		};
+		C86D57DE1E9DFC830053CB29 /* information */ = {
+			isa = PBXGroup;
+			children = (
+				C86D57DF1E9DFC830053CB29 /* ChangePasswordViewController.h */,
+				C86D57E01E9DFC830053CB29 /* ChangePasswordViewController.m */,
+				C86D57E11E9DFC830053CB29 /* ChangePhoneController.h */,
+				C86D57E21E9DFC830053CB29 /* ChangePhoneController.m */,
+				C86D57E31E9DFC830053CB29 /* InformationTableViewCell.h */,
+				C86D57E41E9DFC830053CB29 /* InformationTableViewCell.m */,
+				C86D57E51E9DFC830053CB29 /* InformationViewController.h */,
+				C86D57E61E9DFC830053CB29 /* InformationViewController.m */,
+			);
+			path = information;
 			sourceTree = "<group>";
 		};
 		D109A3E31E89368100D9DCCA = {
@@ -451,8 +470,9 @@
 				D109AF4E1E8939D300D9DCCA /* PersonViewController.m */,
 				C83877221E9B144D00EFAAF3 /* PersonTableViewCell.h */,
 				C83877231E9B144D00EFAAF3 /* PersonTableViewCell.m */,
-				C83877241E9B144D00EFAAF3 /* information */,
+				C86D57DE1E9DFC830053CB29 /* information */,
 				D1F43C1B1E9D0D00003DE9BA /* MySet */,
+				C86D57DA1E9DFAB70053CB29 /* historyIndent */,
 			);
 			path = person;
 			sourceTree = "<group>";
@@ -545,6 +565,8 @@
 				D16B8B011E8E93BC00A4EA52 /* UIView+Common.m */,
 				D16B8B021E8E93BC00A4EA52 /* UIView+XC.h */,
 				D16B8B031E8E93BC00A4EA52 /* UIView+XC.m */,
+				C86D57EB1E9DFDCE0053CB29 /* CustomButton.h */,
+				C86D57EC1E9DFDCE0053CB29 /* CustomButton.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -762,28 +784,31 @@
 				C851D74F1E9B7E7400DCF7E1 /* MoreUserListConteoller.m in Sources */,
 				D109AF491E8939BB00D9DCCA /* IssueViewController.m in Sources */,
 				D1F43C241E9D17EB003DE9BA /* AboutAppViewController.m in Sources */,
+				C86D57E91E9DFC830053CB29 /* InformationTableViewCell.m in Sources */,
 				D109AF461E8939AF00D9DCCA /* IndentViewController.m in Sources */,
 				C838772D1E9B144D00EFAAF3 /* PersonTableViewCell.m in Sources */,
 				C83877A81E9B14A400EFAAF3 /* MyTools.m in Sources */,
 				D109AF3D1E89397700D9DCCA /* NJAppViewController.m in Sources */,
+				C86D57E71E9DFC830053CB29 /* ChangePasswordViewController.m in Sources */,
 				D109AF401E89398900D9DCCA /* BaseViewController.m in Sources */,
+				C86D57F01E9E04EE0053CB29 /* HistoricalOrderTableViewCell.m in Sources */,
 				D16B8B041E8E93BC00A4EA52 /* NSString+Common.m in Sources */,
 				D109A3F71E89368200D9DCCA /* ViewController.m in Sources */,
 				D109AF4F1E8939D300D9DCCA /* PersonViewController.m in Sources */,
+				C86D57DD1E9DFB0B0053CB29 /* HistoricalOrderViewController.m in Sources */,
 				D16B8B061E8E93BC00A4EA52 /* UIView+XC.m in Sources */,
-				C81F16A11E9CCCB000400785 /* ChangePasswordViewController.m in Sources */,
+				C86D57EA1E9DFC830053CB29 /* InformationViewController.m in Sources */,
+				C86D57E81E9DFC830053CB29 /* ChangePhoneController.m in Sources */,
+				C86D57ED1E9DFDCE0053CB29 /* CustomButton.m in Sources */,
 				D16B8B051E8E93BC00A4EA52 /* UIView+Common.m in Sources */,
 				D109A3F41E89368200D9DCCA /* AppDelegate.m in Sources */,
 				D109A3F11E89368200D9DCCA /* main.m in Sources */,
-				C83877301E9B144D00EFAAF3 /* InformationViewController.m in Sources */,
 				D16B8AFC1E8E932E00A4EA52 /* NJTabbarView.m in Sources */,
 				D16B8AFB1E8E932E00A4EA52 /* NJTabbarButton.m in Sources */,
-				C838772F1E9B144D00EFAAF3 /* InformationTableViewCell.m in Sources */,
 				D109AF4C1E8939C700D9DCCA /* CollectViewController.m in Sources */,
 				D1F43C211E9D0DF4003DE9BA /* MySetTableViewCell.m in Sources */,
 				D16B8AFA1E8E932E00A4EA52 /* NJTabbarViewController.m in Sources */,
 				D1F43C1E1E9D0D1E003DE9BA /* MySetViewController.m in Sources */,
-				C838772E1E9B144D00EFAAF3 /* ChangePhoneController.m in Sources */,
 				D16B8AF91E8E932E00A4EA52 /* NJNVViewController.m in Sources */,
 				C83877A51E9B148500EFAAF3 /* BaseModel.m in Sources */,
 				C851D7521E9C6A2200DCF7E1 /* NsTime.m in Sources */,
