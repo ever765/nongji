@@ -1,5 +1,5 @@
 //
-//  InformationTableViewCell.h
+//  InformationTableViewCell.m
 //  nongji
 //
 //  Created by tobo on 17/4/8.
@@ -11,5 +11,4 @@
 @interface InformationTableViewCell : UITableViewCell
 //根据index   显示不同的内容
 - (void)drewContentViewWithIndexPathRRow:(NSInteger)index;
-
 @end

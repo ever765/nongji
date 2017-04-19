@@ -20,9 +20,10 @@
 @end
 
 @implementation ChangePhoneController
-
+- (NSString *)navigationTitleText{
+    return @"修改手机号";
+}
 - (void)viewDidLoad {
-    self.vcTitle = @"更改手机号";
     [super viewDidLoad];
     [self initView];
     // Do any additional setup after loading the view.
@@ -108,7 +109,7 @@
     }else{
         str = [NSString stringWithFormat:@"%lds重新获取",(long)second];
     }
-   
+    
     [_identifyingCodeButton setTitle:str forState:UIControlStateNormal];
     
 }
@@ -119,13 +120,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

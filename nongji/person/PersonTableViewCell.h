@@ -1,5 +1,5 @@
 //
-//  PersonTableViewCell.h
+//  PersonTableViewCell.m
 //  nongji
 //
 //  Created by tobo on 17/4/8.
@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface PersonTableViewCell : UITableViewCell
+
 //根据index   显示不同的内容
 - (void)drewContentViewWithIndexPathRRow:(NSInteger)index;
+
 @end

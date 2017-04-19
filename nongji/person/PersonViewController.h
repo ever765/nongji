@@ -1,13 +1,13 @@
 //
-//  PersonViewController.h
+//  PersonViewController.m
 //  nongji
 //
 //  Created by tobo on 17/3/27.
 //  Copyright © 2017年 WDX. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "NJBaseTableViewController.h"
 
-@interface PersonViewController : BaseViewController
+@interface PersonViewController : NJBaseTableViewController
 
 @end

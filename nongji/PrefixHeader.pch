@@ -39,12 +39,12 @@
 #define LINECOLOR UIColorFromRGB(0xeeeeee)
 
 
-#pragma mark 据说此方法真机不打印nslog 调试打印节省性能
-#ifdef DEBUG
-#define NSLog(...) NSLog(__VA_ARGS__)
-#else
-#define NSLog(...)
-#endif
+//#pragma mark 据说此方法真机不打印nslog 调试打印节省性能
+//#ifdef DEBUG
+//#define NSLog(...) NSLog(__VA_ARGS__)
+//#else
+//#define NSLog(...)
+//#endif
 #define PUSH     [self.navigationController pushViewController:vc animated:YES];
 //16进制转换rgb
 #define UIColorFromRGB(rgbValue) [[UIColor alloc] initWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue &0xFF00) >>8))/255.0 blue:((float)(rgbValue &0xFF))/255.0 alpha:1.0]

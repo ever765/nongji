@@ -16,9 +16,10 @@
 @end
 
 @implementation ChangePasswordViewController
-
+- (NSString *)navigationTitleText{
+    return @"修改密码";
+}
 - (void)viewDidLoad {
-    self.vcTitle = @"密码";
     [super viewDidLoad];
     [self initView];
     // Do any additional setup after loading the view.

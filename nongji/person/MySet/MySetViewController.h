@@ -2,12 +2,12 @@
 //  MySetViewController.h
 //  nongji
 //
-//  Created by tobo on 17/4/11.
+//  Created by Cus on 2017/4/19.
 //  Copyright © 2017年 WDX. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "NJBaseTableViewController.h"
 
-@interface MySetViewController : BaseViewController
+@interface MySetViewController : NJBaseTableViewController
 
 @end

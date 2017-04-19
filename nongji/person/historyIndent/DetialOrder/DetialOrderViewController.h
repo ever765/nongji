@@ -2,12 +2,12 @@
 //  DetialOrderViewController.h
 //  nongji
 //
-//  Created by Cus on 2017/4/14.
+//  Created by Cus on 2017/4/19.
 //  Copyright © 2017年 WDX. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "NJBaseTableViewController.h"
 
-@interface DetialOrderViewController : BaseViewController
+@interface DetialOrderViewController : NJBaseTableViewController
 
 @end

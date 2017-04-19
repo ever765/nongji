@@ -19,9 +19,10 @@
 @end
 
 @implementation HistoricalOrderViewController
-
+- (NSString *)navigationTitleText{
+    return @"历史订单";
+}
 - (void)viewDidLoad {
-    self.vcTitle = @"历史订单";
     [super viewDidLoad];
     [self createHeaderView];
     [self registerCellID];
@@ -50,9 +51,9 @@
 }
 
 -(void)registerCellID{
-    _tableView.frame = CGRectMake(0, ViewWidth(100) + 64, ScreenWidth(), ScreenHeight() - 64 - ViewWidth(100));
-//    _tableView.backgroundColor = UIColorFromRGB(0xeeeeee);
-    [_tableView registerClass:[HistoricalOrderTableViewCell class] forCellReuseIdentifier:@"HistoricalOrderTableViewCell_ID"];
+//    self.frame = CGRectMake(0, ViewWidth(100) + 64, ScreenWidth(), ScreenHeight() - 64 - ViewWidth(100));
+    //    _tableView.backgroundColor = UIColorFromRGB(0xeeeeee);
+    [self.tableView registerClass:[HistoricalOrderTableViewCell class] forCellReuseIdentifier:@"HistoricalOrderTableViewCell_ID"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -85,13 +86,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

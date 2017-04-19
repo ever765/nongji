@@ -1,21 +1,34 @@
 //
-//  MoreUserListConteoller.m
+//  HtmlViewController.m
 //  nongji
 //
 //  Created by Cus on 2017/4/19.
 //  Copyright © 2017年 WDX. All rights reserved.
 //
 
-#import "MoreUserListConteoller.h"
+#import "HtmlViewController.h"
 
-@interface MoreUserListConteoller ()
+@interface HtmlViewController ()
 
 @end
 
-@implementation MoreUserListConteoller
+@implementation HtmlViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIWebView *view = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth(), ScreenHeight())];
+    [self.view addSubview:view];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"1" ofType:@"html"];
+    
+    NSString *htmlString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    
+    NSString *basePath = [[NSBundle mainBundle] bundlePath];
+    
+    NSURL *baseURL = [NSURL fileURLWithPath:basePath];
+    
+    [view loadHTMLString:htmlString baseURL:baseURL];
+   
     // Do any additional setup after loading the view.
 }
 

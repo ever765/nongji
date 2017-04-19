@@ -7,16 +7,16 @@
 //
 
 #import "AboutAppViewController.h"
-
 #define ViewFrameOriginX ViewWidth(88)
 @interface AboutAppViewController ()
 
 @end
 
 @implementation AboutAppViewController
-
+- (NSString *)navigationTitleText{
+    return @"关于我们";
+}
 - (void)viewDidLoad {
-    self.vcTitle = @"关于我们";
     [super viewDidLoad];
     [self initView];
     // Do any additional setup after loading the view.
@@ -33,6 +33,7 @@
         [self.view addSubview:label];
     }
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

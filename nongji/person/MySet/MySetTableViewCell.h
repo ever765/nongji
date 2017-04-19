@@ -1,5 +1,5 @@
 //
-//  MySetTableViewCell.h
+//  MySetTableViewCell.m
 //  nongji
 //
 //  Created by tobo on 17/4/11.
@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MySetTableViewCell : UITableViewCell
+
 - (void)drewContentViewWithIndexPathRRow:(NSInteger)index;
+
 @end

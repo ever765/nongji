@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-#import "MoreUserListConteoller.h"
+//#import "MoreUserListConteoller.h"
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
 
 #import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
@@ -45,14 +45,16 @@
 @end
 
 @implementation HomeViewController
+- (NSString *)navigationTitleText{
+    return @"地图";
+}
 
 - (void)viewDidLoad {
-    self.vcTitle = @"地图";
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    _mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 64, ScreenWidth(), ScreenHeight() - 64 -44)];
+    _mapView = [[BMKMapView alloc]initWithFrame:CGRectMake(0, 64, ScreenWidth(), ScreenHeight() - 64)];
     _mapView.zoomLevel = 19.0;
-    _mapView.showMapScaleBar = YES;//显示比例尺
+//    _mapView.showMapScaleBar = YES;//显示比例尺
     [self.view addSubview: _mapView];
     _searchAddress = [[BMKGeoCodeSearch alloc]init];
     _searchAddress.delegate = self;
@@ -60,13 +62,15 @@
     [self createNVC];
 }
 
+
+
 - (void)createNVC{
-    UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchDown];
-    button.frame = CGRectMake(ScreenWidth() - ViewWidth(80), MinY(_titileLabel), ViewWidth(50), viewHeight(_titileLabel));
-    [button setImage:[UIImage imageNamed:@"ic_more"] forState:UIControlStateNormal];
-    button.backgroundColor = UIColorFromRGB(0xeeeeee);
-    [_nvView addSubview: button];
+    //    UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+    //    [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchDown];
+    //    button.frame = CGRectMake(ScreenWidth() - ViewWidth(80), MinY(_titileLabel), ViewWidth(50), viewHeight(_titileLabel));
+    //    [button setImage:[UIImage imageNamed:@"ic_more"] forState:UIControlStateNormal];
+    //    button.backgroundColor = UIColorFromRGB(0xeeeeee);
+    //    [_nvView addSubview: button];
 }
 
 - (void)createTableView{
@@ -252,7 +256,7 @@
     
     NSLog(@"Point------%f-----%f",point.x,point.y);
     //重新定位了LocationView
-  
+    
     [_mapView addSubview:self.messageView];
     self.locationView.center = point;
     
@@ -273,8 +277,8 @@
 //地图被拖动的时候，需要时时的渲染界面，当渲染结束的时候我们就去定位然后获取图片对应的经纬度
 
 - (void)mapView:(BMKMapView *)mapView onDrawMapFrame:(BMKMapStatus*)status{
-   
-
+    
+    
     NSLog(@"onDrawMapFrame");
 }
 
@@ -291,7 +295,7 @@
     CLLocationCoordinate2D touchMapCoordinate =
     [_mapView convertPoint:touchPoint toCoordinateFromView:_mapView];//这里touchMapCoordinate就是该点的经纬度了
     NSLog(@"touching %f,%f",touchMapCoordinate.latitude,touchMapCoordinate.longitude);
-     [_mapView removeAnnotations:_mapView.annotations];
+    [_mapView removeAnnotations:_mapView.annotations];
     for (NSInteger i = 0; i<5; i++) {
         BMKPointAnnotation *item = [[BMKPointAnnotation alloc]init];
         CLLocationCoordinate2D coords = CLLocationCoordinate2DMake(touchMapCoordinate.latitude + arc4random() % 10/100.0,touchMapCoordinate.longitude + arc4random() % 10/100.0);//纬度，经度//纬度，经度
@@ -304,7 +308,7 @@
     BOOL flag=[_searchAddress reverseGeoCode:option];
     
     if (flag) {
-                _mapView.showsUserLocation=NO;//不显示自己的位置
+        _mapView.showsUserLocation=NO;//不显示自己的位置
     }
 }
 //点击地图中的背景有标记的区域
@@ -351,21 +355,21 @@
     }
     
     if(resultAddress.length == 0){
-       self.addressLabel.text = @"未知区域";
+        self.addressLabel.text = @"未知区域";
         return;
     }
     
-  
+    
     self.addressLabel.text = resultAddress;
     self.location2D = coor;
-
+    
 }
 //点击一个大头针
 - (void)mapView:(BMKMapView *)mapView didSelectAnnotationView:(BMKAnnotationView *)view{
     NSLog(@"点击didSelectAnnotationView-");
 }
 - (void)tgrAction:(UITapGestureRecognizer *)tgr{
-   
+    
     if ([tgr.view isEqual:self.locImageView] && _messageViewIsHidden) {
         [_mapView addSubview:self.messageView];
         _messageViewIsHidden = NO;
@@ -376,8 +380,8 @@
     }
 }
 - (void)buttonAction:(UIButton *)button{
-    MoreUserListConteoller *vc = [[MoreUserListConteoller alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    //    MoreUserListConteoller *vc = [[MoreUserListConteoller alloc] init];
+    //    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

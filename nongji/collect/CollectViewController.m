@@ -2,7 +2,7 @@
 //  CollectViewController.m
 //  nongji
 //
-//  Created by tobo on 17/3/27.
+//  Created by Cus on 2017/4/19.
 //  Copyright © 2017年 WDX. All rights reserved.
 //
 
@@ -13,10 +13,12 @@
 @end
 
 @implementation CollectViewController
+- (NSString *)navigationTitleText{
+    return @"我的收藏";
+}
+
 
 - (void)viewDidLoad {
-    self.vcTitle = @"我的收藏";
-    self.isBack = NO;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

@@ -8,7 +8,7 @@
 
 #import "NJTabbarViewController.h"
 
-#import "BaseViewController.h"
+#import "NJAppViewController.h"
 
 
 #import "HomeViewController.h"//首页
@@ -20,7 +20,7 @@
 
 #import "NJNVViewController.h"
 #import "NJTabbarView.h"
-
+#import "NJAppViewController.h"
 
 @interface NJTabbarViewController ()<NJTabbarViewDelegate>
 @property(nonatomic, weak)NJTabbarView *mainTabBar;

@@ -2,12 +2,12 @@
 //  IssueViewController.h
 //  nongji
 //
-//  Created by tobo on 17/3/27.
+//  Created by Cus on 2017/4/19.
 //  Copyright © 2017年 WDX. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "NJBaseTableViewController.h"
 
-@interface IssueViewController : BaseViewController
+@interface IssueViewController : NJBaseTableViewController
 
 @end

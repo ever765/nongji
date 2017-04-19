@@ -22,15 +22,16 @@
 
 @implementation PersonViewController
 
+- (NSString *)navigationTitleText{
+    return @"个人中心";
+}
+
 - (void)viewDidLoad {
-    self.vcTitle = @"个人中心";
-    self.isBack = NO;
     [super viewDidLoad];
     [self registerCellID];
     [self createHeaderView];
     // Do any additional setup after loading the view.
 }
-
 - (void)createHeaderView{
     _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth(), ViewWidth(256))];
     _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(ViewWidth(88), ViewWidth(58), ViewWidth(140), ViewWidth(140))];
@@ -45,14 +46,14 @@
     [_headerView addSubview:_phoneLabel];
     
     _statusLable =[MyTools lableWithtextColor:UIColorFromRGB(0x333333) textFont:[UIFont systemFontOfSize:titleFontSize] inSize:CGSizeZero withText:@"已实名认证"];
-     size = LabelSize(_statusLable.text, titleFontSize);
+    size = LabelSize(_statusLable.text, titleFontSize);
     _statusLable.frame = CGRectMake(MaxX(_imageView) + ViewWidth(20), _imageView.center.y + ViewWidth(10), size.width, size.height);
     [_headerView addSubview:_statusLable];
-    _tableView.tableHeaderView = _headerView;
+    self.tableView.tableHeaderView = _headerView;
 }
 
 - (void)registerCellID{
-    [_tableView registerClass:[PersonTableViewCell class] forCellReuseIdentifier:@"PersonTableViewCell_Id"];
+    [self.tableView registerClass:[PersonTableViewCell class] forCellReuseIdentifier:@"PersonTableViewCell_Id"];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 4;
@@ -89,13 +90,13 @@
 }
 
 /*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

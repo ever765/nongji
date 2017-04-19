@@ -2,12 +2,12 @@
 //  ChangePhoneController.h
 //  nongji
 //
-//  Created by tobo on 17/4/9.
+//  Created by Cus on 2017/4/19.
 //  Copyright © 2017年 WDX. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "NJAppViewController.h"
 
-@interface ChangePhoneController : BaseViewController
+@interface ChangePhoneController : NJAppViewController
 
 @end

@@ -2,21 +2,24 @@
 //  InformationViewController.m
 //  nongji
 //
-//  Created by tobo on 17/4/8.
+//  Created by Cus on 2017/4/19.
 //  Copyright © 2017年 WDX. All rights reserved.
 //
 
 #import "InformationViewController.h"
 #import "InformationTableViewCell.h"
 #import "ChangePhoneController.h"
+
 @interface InformationViewController ()
 
 @end
 
 @implementation InformationViewController
+- (NSString *)navigationTitleText{
+    return @"个人资料";
+}
 
 - (void)viewDidLoad {
-    self.vcTitle = @"个人资料";
     [super viewDidLoad];
     [self registerCellID];
     // Do any additional setup after loading the view.
@@ -27,7 +30,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (void)registerCellID{
-    [_tableView registerClass:[InformationTableViewCell class] forCellReuseIdentifier:@"InformationTableViewCell_Id"];
+    [self.tableView registerClass:[InformationTableViewCell class] forCellReuseIdentifier:@"InformationTableViewCell_Id"];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 5;
@@ -56,6 +59,8 @@
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
+
+
 /*
 #pragma mark - Navigation
 

@@ -2,12 +2,12 @@
 //  MoreUserListConteoller.h
 //  nongji
 //
-//  Created by Cus on 2017/4/10.
+//  Created by Cus on 2017/4/19.
 //  Copyright © 2017年 WDX. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "NJBaseTableViewController.h"
 
-@interface MoreUserListConteoller : BaseViewController
+@interface MoreUserListConteoller : NJBaseTableViewController
 
 @end

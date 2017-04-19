@@ -53,7 +53,7 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     
-    _imageView.frame = CGRectMake(ViewFrameOriginX, ViewWidth(10), ViewWidth(60), ViewWidth(60));
+    _imageView.frame = CGRectMake(ViewFrameOriginX, ViewWidth(50), ViewWidth(60), ViewWidth(60));
     
     CGSize size = LabelSize(_titleLabel.text, titleFontSize);
     _titleLabel.frame = CGRectMake(MaxX(_imageView)  + ViewWidth(20), MaxY(_imageView) - size.height, size.width, size.height);
@@ -69,7 +69,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 

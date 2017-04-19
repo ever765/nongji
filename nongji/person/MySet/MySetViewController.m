@@ -2,7 +2,7 @@
 //  MySetViewController.m
 //  nongji
 //
-//  Created by tobo on 17/4/11.
+//  Created by Cus on 2017/4/19.
 //  Copyright © 2017年 WDX. All rights reserved.
 //
 
@@ -14,17 +14,17 @@
 @end
 
 @implementation MySetViewController
-
+- (NSString *)navigationTitleText{
+    return @"设置";
+}
 - (void)viewDidLoad {
-    self.vcTitle = @"设置";
     [super viewDidLoad];
     [self registerCellID];
     // Do any additional setup after loading the view.
 }
 - (void)registerCellID{
-    _tableView.frame = CGRectMake(0, ViewWidth(60) + 64, ScreenWidth(), ScreenHeight() - 64 - ViewWidth(60));
-    _tableView.bounces = NO;
-    [_tableView registerClass:[MySetTableViewCell class] forCellReuseIdentifier:@"MySetTableViewCell_Id"];
+    self.tableView.bounces = NO;
+    [self.tableView registerClass:[MySetTableViewCell class] forCellReuseIdentifier:@"MySetTableViewCell_Id"];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

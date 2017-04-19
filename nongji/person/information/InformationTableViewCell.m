@@ -92,8 +92,8 @@
         _lineView.frame = CGRectMake(0, 0, 0, 0);
         _cardImageView.frame = CGRectMake(MaxX(_titleLabel) - ViewWidth(30), MaxY(_titleLabel) + ViewWidth(20), ScreenWidth() - (MaxX(_titleLabel) - ViewWidth(30))*2, (ScreenWidth() - (MaxX(_titleLabel) - ViewWidth(30))*2)/4*3);
     }
- 
- 
+    
+    
 }
 
 -(void)clearFrame{
@@ -113,7 +113,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
