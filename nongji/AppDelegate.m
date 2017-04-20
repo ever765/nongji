@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "NJTabbarViewController.h"
-#import "HtmlViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -27,7 +26,7 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[HtmlViewController alloc] init];
+    self.window.rootViewController = [[NJTabbarViewController alloc] init];
     [self.window makeKeyAndVisible];
     return YES;
 }

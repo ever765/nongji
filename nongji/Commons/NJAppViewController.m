@@ -11,6 +11,10 @@
 #import "AHSKitMacro.h"
 
 @interface NJAppViewController ()
+//自定义下划线
+{
+    UIView *_navDownLineView;
+}
 // 自定义中间视图
 @property (nonatomic, strong) UIView *navCenterView;
 
@@ -19,6 +23,8 @@
 
 // 自定义右边按钮
 @property (nonatomic, strong) UIButton *navRightButton;
+
+
 
 @end
 
@@ -140,6 +146,17 @@
     [self _configNavLeftButton];
     // 右侧按钮
     [self _configNavRightButton];
+    //底部分割条
+    [self _configNavDownLineView];
+}
+
+- (void)_configNavDownLineView{
+    if (!_navDownLineView) {
+        _navDownLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 63, kSCREEN_WIDTH, 1)];
+        _navDownLineView.backgroundColor = UIColorFromRGB(0xeeeeee);
+        [_customNavBar addSubview:_navDownLineView];
+    }
+    
 }
 
 - (void)_configNavCenterView

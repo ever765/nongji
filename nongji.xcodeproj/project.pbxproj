@@ -77,7 +77,7 @@
 		C851D7511E9C6A2200DCF7E1 /* NsTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NsTime.m; sourceTree = "<group>"; };
 		C86D57EB1E9DFDCE0053CB29 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		C86D57EC1E9DFDCE0053CB29 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
-		C878A2A71EA614DA007367AA /* AHSKitMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHSKitMacro.h; sourceTree = "<group>"; };
+		C878A2A71EA614DA007367AA /* AHSKitMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AHSKitMacro.h; path = Category/AHSKitMacro.h; sourceTree = "<group>"; };
 		C878A2AF1EA6F4D6007367AA /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		C878A2B01EA6F4D6007367AA /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C878A2B21EA6F549007367AA /* NJBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJBaseTableViewController.h; sourceTree = "<group>"; };
@@ -369,6 +369,7 @@
 		D109AF501E8939F600D9DCCA /* base */ = {
 			isa = PBXGroup;
 			children = (
+				C878A2A71EA614DA007367AA /* AHSKitMacro.h */,
 				C83877A31E9B148500EFAAF3 /* BaseModel.h */,
 				C83877A41E9B148500EFAAF3 /* BaseModel.m */,
 				D109AF3B1E89397700D9DCCA /* NJAppViewController.h */,
@@ -441,7 +442,6 @@
 				D16B8B031E8E93BC00A4EA52 /* UIView+XC.m */,
 				C86D57EB1E9DFDCE0053CB29 /* CustomButton.h */,
 				C86D57EC1E9DFDCE0053CB29 /* CustomButton.m */,
-				C878A2A71EA614DA007367AA /* AHSKitMacro.h */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -584,7 +584,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

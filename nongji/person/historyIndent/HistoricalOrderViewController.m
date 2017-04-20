@@ -50,6 +50,10 @@
     [self.view addSubview:headerView];
 }
 
+- (CGFloat)tableViewOriginY{
+    return 64 + ViewWidth(78);
+}
+
 -(void)registerCellID{
 //    self.frame = CGRectMake(0, ViewWidth(100) + 64, ScreenWidth(), ScreenHeight() - 64 - ViewWidth(100));
     //    _tableView.backgroundColor = UIColorFromRGB(0xeeeeee);
