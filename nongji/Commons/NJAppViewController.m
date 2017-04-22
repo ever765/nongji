@@ -35,7 +35,7 @@
 {
     if (_customNavBar == nil) {
         _customNavBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kSCREEN_WIDTH, KNAV_HEIGHT)];
-        //        _customNavBar.backgroundColor = [ECColorConfig appMainBlackColor];
+        _customNavBar.backgroundColor = UIColorFromRGB(0x1784CA);
     }
     return _customNavBar;
 }
@@ -113,9 +113,17 @@
     // 右边按钮的实现，需在子类重写
 }
 
+- (void)setIsHiddenNaVc:(BOOL)isHiddenNaVc{
+    _isHiddenNaVc = isHiddenNaVc;
+    if (isHiddenNaVc) {
+        [_customNavBar removeFromSuperview];
+    }
+}
+
 #pragma mark -- lifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = UIColorFromRGB(0xffffff);
     self.firstAppear = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
     //    self.view.backgroundColor = [ECColorConfig appBackgroundColor];
@@ -170,7 +178,7 @@
         titleLabel.textAlignment = NSTextAlignmentCenter;
         //        titleLabel.font = [UIFont fontWithStyle:@"Helvetica-Bold" fontSize:18.f];
         titleLabel.text = [self navigationTitleText];
-        titleLabel.textColor = [UIColor blackColor];
+        titleLabel.textColor = [UIColor whiteColor];
         [self.navCenterView addSubview:titleLabel];
     }
     
@@ -193,7 +201,7 @@
                    self.navigationController.presentingViewController != nil);
     
     if (leftButtonImage == nil && byPush && leftButtonTitle == nil){
-        [self.navLeftButton setImage:[UIImage imageNamed:@"left"] forState:UIControlStateNormal];
+        [self.navLeftButton setImage:[UIImage imageNamed:@"ic_return"] forState:UIControlStateNormal];
     }else if(leftButtonImage){
         [self.navLeftButton setImage:leftButtonImage forState:UIControlStateNormal];
     } else if (leftButtonTitle) {

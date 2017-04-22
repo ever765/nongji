@@ -46,4 +46,6 @@
 - (UIImage *)navigationRightImage;
 - (void)navigationRightAction:(id)sender;
 
+//隐藏导航v
+@property (nonatomic, assign)BOOL isHiddenNaVc;
 @end

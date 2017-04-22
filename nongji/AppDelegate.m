@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NJTabbarViewController.h"
+#import "LoginViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -26,7 +27,12 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[NJTabbarViewController alloc] init];
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"userID"]) {
+         self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [[LoginViewController alloc] init]];
+    }else{
+        self.window.rootViewController = [[NJTabbarViewController alloc] init];
+    }
+   
     [self.window makeKeyAndVisible];
     return YES;
 }

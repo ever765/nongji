@@ -32,7 +32,7 @@
 {
     _supportPullUpRefresh = supportPullUpRefresh;
     if (_supportPullUpRefresh && self.tableView.mj_footer == nil) {
-        self.tableView.mj_footer = [MJRefreshBackFooter footerWithRefreshingTarget:self refreshingAction:@selector(pullUpRefreshData)];
+        self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(pullUpRefreshData)];
     } else {
         [self.tableView.mj_footer removeFromSuperview];
     }

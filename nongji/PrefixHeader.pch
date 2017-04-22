@@ -30,6 +30,7 @@
 #define mainFontBlack UIColorFromRGB(0x333333)
 //根据内容  字体大小。计算label的size
 #define LabelSize(content,fontSize) [content sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:fontSize],NSFontAttributeName,nil]]
+#define MoreLineLabelSize(content,width,fontSize)  [content boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]} context:nil].size;
 //主题vc背景色浅灰色
 #define mainBlackgroundColor  UIColorFromRGB(0xeeeeee)
 //导航栏背景色
