@@ -40,13 +40,10 @@
     
     _downLineView = [[UIView alloc] init];
     
-    if (indexRow ==0 || indexRow == 7) {
-        _downLineView.backgroundColor = UIColorFromRGB(0xcccccc);
-        _downLineView.frame = CGRectMake(ViewFrameOriginX - ViewWidth(20), MaxY(self.contentView) - ViewWidth(2), ScreenWidth() - ViewFrameOriginX, ViewWidth(2));
-    }else{
-        _downLineView.backgroundColor = LINECOLOR;
-        _downLineView.frame = CGRectMake(ViewFrameOriginX, MaxY(self.contentView) - ViewWidth(1), ScreenWidth() - ViewFrameOriginX, ViewWidth(1));
-    }
+    
+    
+    _textView = [[UITextView alloc] init];
+    [self.contentView addSubview:_textView];
   
   
     [self.contentView addSubview:_downLineView];
@@ -128,6 +125,20 @@
         _rightLabel.frame = CGRectMake(ScreenWidth() - ViewFrameOriginX - size.width, ViewWidth(20), size.width, size.height);
         [self.contentView addSubview:_rightLabel];
         _textField.frame = CGRectMake(MinX(_textField) , ViewWidth(20), viewWidth(_textField) - size.width, size.height);
+    }else if (indexRow == 9){
+        _textView.frame = CGRectMake(ViewFrameOriginX * 2, MaxY(_titleLable) + ViewWidth(40), ScreenWidth() - 4 * ViewFrameOriginX, (ScreenWidth() - 4 * ViewFrameOriginX)  / 2);
+        _textView.layer.borderColor = UIColorFromRGB(0xcccccc).CGColor;
+        _textView.layer.borderWidth = ViewWidth(2);
+    }
+    if (indexRow ==0 || indexRow == 7) {
+        _downLineView.backgroundColor = UIColorFromRGB(0xcccccc);
+        _downLineView.frame = CGRectMake(ViewFrameOriginX - ViewWidth(20), MaxY(self.contentView) - ViewWidth(2), ScreenWidth() - ViewFrameOriginX, ViewWidth(2));
+    }else if(indexRow == 9){
+        _downLineView.backgroundColor = LINECOLOR;
+        _downLineView.frame = CGRectMake(ViewFrameOriginX, MaxY(_textView) + ViewWidth(20), ScreenWidth() - ViewFrameOriginX, ViewWidth(1));
+    }else{
+        _downLineView.backgroundColor = LINECOLOR;
+        _downLineView.frame = CGRectMake(ViewFrameOriginX, MaxY(self.contentView) - ViewWidth(1), ScreenWidth() - ViewFrameOriginX, ViewWidth(1));
     }
 }
 

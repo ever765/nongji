@@ -12,12 +12,17 @@
 @interface IssueViewController ()<SIActionSheetDelegate>
 @property (nonatomic,strong)NSArray *cellTitleLableArray;    ///< tableView前面的标题
 @property (nonatomic,strong)NSArray *cellTextPlaceOrderArray; ///< tableView后面的标题
+@property (nonatomic,strong)NSDictionary *dataSource;
 @end
 
 @implementation IssueViewController
 
 - (NSString *)navigationTitleText{
     return @"发布";
+}
+
+- (CGFloat)tableViewBottomPadding{
+    return ViewWidth(88);
 }
 
 - (UIImage *)navigationLeftImage{
@@ -28,13 +33,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initData];
+    [self createButton];
     // Do any additional setup after loading the view.
 }
 
 - (void)initData{
     
     _cellTitleLableArray = @[@"必填项",@"作业地点",@"详细地址",@"耕作面积",@"农作物",@"作业时间",@"服务类型",@"选填项",@"理想报价",@"描述"];
+    _dataSource = [NSMutableDictionary new];
 }
+
+//订单确认
+- (void)createButton{
+    UIButton *issueButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    issueButton.frame = CGRectMake(0 , ScreenHeight() - ViewWidth(88),ScreenWidth(), ViewWidth(88));
+    [issueButton setTitle:@"发布" forState:UIControlStateNormal];
+    issueButton.backgroundColor = UIColorFromRGB(0x1784CA);
+    [issueButton setTitleColor:UIColorFromRGB(0xffffff) forState:UIControlStateNormal];
+    issueButton.titleLabel.font = [UIFont systemFontOfSize:titleFontSize - 2];
+    [issueButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:issueButton];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     
@@ -42,6 +62,9 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    if (indexPath.row == 9) {
+       return ScreenWidth()/2   + ViewWidth(88);
+    }
    return ViewWidth(88);
 }
 
@@ -72,7 +95,24 @@
         actionSheet.delegate = self;
         [actionSheet show];
     }
-    
+}
+
+- (void)addDateFromDict{
+    NSArray *array = @[@"",@"作业地点",@"地址详情",@"耕地面积",@"农作物",@"作业时间",@"服务类型",@"",@"理想报价",@"描述"];
+    for (NSInteger i= 0; i < _cellTitleLableArray.count; i++) {
+        
+        if (i==0 || i== 7) {
+            continue;
+        }
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+        IssueTableViewCell *cell = (IssueTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+        if (i == 9) {
+              [_dataSource setValue:cell.textView.text forKey:array[i]];
+            continue;
+        }
+  
+        [_dataSource setValue:cell.textField.text forKey:array[i]];
+    }
 }
 
 
@@ -85,6 +125,11 @@
         cell.textField.text = title;
     }
     
+}
+
+- (void)buttonAction:(UIButton *)button{
+    [self addDateFromDict];
+    NSLog(@"发布 %@",_dataSource);
 }
 
 - (void)didReceiveMemoryWarning {

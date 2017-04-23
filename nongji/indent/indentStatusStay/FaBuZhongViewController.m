@@ -9,6 +9,7 @@
 #import "FaBuZhongViewController.h"
 #import "FaBuZhongTableViewCell.h"
 #import "IssueSetViewController.h"
+#import "CancelIssueViewController.h"
 @interface FaBuZhongViewController ()
 
 @end
@@ -59,7 +60,8 @@
 }
 
 - (void)navigationRightAction:(id)sender{
-    
+    CancelIssueViewController *vc = [[CancelIssueViewController alloc] init];
+    PUSH;
 }
 
 

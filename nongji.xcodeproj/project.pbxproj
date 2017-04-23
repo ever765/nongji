@@ -40,6 +40,7 @@
 		D109A3FC1E89368200D9DCCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D109A3FB1E89368200D9DCCA /* Assets.xcassets */; };
 		D109A3FF1E89368200D9DCCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D109A3FD1E89368200D9DCCA /* LaunchScreen.storyboard */; };
 		D109AF3D1E89397700D9DCCA /* NJAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D109AF3C1E89397700D9DCCA /* NJAppViewController.m */; };
+		D13A3FEC1EAC455800665F4A /* CancelIssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D13A3FEB1EAC455800665F4A /* CancelIssueViewController.m */; };
 		D16B8AD71E8E927B00A4EA52 /* lb_ic_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = D16B8AC81E8E927B00A4EA52 /* lb_ic_cancel.png */; };
 		D16B8AD81E8E927B00A4EA52 /* lb_ic_check.png in Resources */ = {isa = PBXBuildFile; fileRef = D16B8AC91E8E927B00A4EA52 /* lb_ic_check.png */; };
 		D16B8AD91E8E927B00A4EA52 /* lb_ic_img.9.png in Resources */ = {isa = PBXBuildFile; fileRef = D16B8ACA1E8E927B00A4EA52 /* lb_ic_img.9.png */; };
@@ -152,6 +153,8 @@
 		D109A4001E89368200D9DCCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D109AF3B1E89397700D9DCCA /* NJAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJAppViewController.h; sourceTree = "<group>"; };
 		D109AF3C1E89397700D9DCCA /* NJAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJAppViewController.m; sourceTree = "<group>"; };
+		D13A3FEA1EAC455800665F4A /* CancelIssueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancelIssueViewController.h; sourceTree = "<group>"; };
+		D13A3FEB1EAC455800665F4A /* CancelIssueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancelIssueViewController.m; sourceTree = "<group>"; };
 		D16B8AC81E8E927B00A4EA52 /* lb_ic_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lb_ic_cancel.png; sourceTree = "<group>"; };
 		D16B8AC91E8E927B00A4EA52 /* lb_ic_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lb_ic_check.png; sourceTree = "<group>"; };
 		D16B8ACA1E8E927B00A4EA52 /* lb_ic_img.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lb_ic_img.9.png; sourceTree = "<group>"; };
@@ -540,6 +543,8 @@
 				D17E5DA71EA9F69700899DA0 /* IssueSetTableViewCell.m */,
 				D17E5DA81EA9F69700899DA0 /* IssueSetViewController.h */,
 				D17E5DA91EA9F69700899DA0 /* IssueSetViewController.m */,
+				D13A3FEA1EAC455800665F4A /* CancelIssueViewController.h */,
+				D13A3FEB1EAC455800665F4A /* CancelIssueViewController.m */,
 			);
 			path = indentStatusStay;
 			sourceTree = "<group>";
@@ -741,6 +746,7 @@
 				D17E5DB61EA9F69700899DA0 /* WorkingViewController.m in Sources */,
 				D1F43C311EA89817003DE9BA /* RegisterViewController.m in Sources */,
 				D17E5DB01EA9F69700899DA0 /* IndentFinishViewController.m in Sources */,
+				D13A3FEC1EAC455800665F4A /* CancelIssueViewController.m in Sources */,
 				C878A2F11EA6F9DB007367AA /* MySetTableViewCell.m in Sources */,
 				D17E5D761EA8B14E00899DA0 /* ForgetPasswordViewController.m in Sources */,
 				D109AF3D1E89397700D9DCCA /* NJAppViewController.m in Sources */,
