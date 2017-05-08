@@ -26,7 +26,7 @@
 
 - (instancetype)init{
     if (self = [super init]) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = UIColorFromRGB(0x1784CA);
         [self SetupWriteButton];
     }
     

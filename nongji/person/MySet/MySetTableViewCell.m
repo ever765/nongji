@@ -52,12 +52,10 @@
     
     
     CGSize size = LabelSize(_titleLabel.text, titleFontSize);
-    _titleLabel.frame = CGRectMake(ViewFrameOriginX, MaxY(self.contentView) - ViewWidth(10) - size.height, size.width, size.height);
+    _titleLabel.frame = CGRectMake(ViewFrameOriginX, MaxY(self.contentView)/2 - size.height/2, size.width, size.height);
     
-    _rightImageView.frame = CGRectMake(ScreenWidth() - ViewWidth(50) , MaxY(_titleLabel) - ViewWidth(30), ViewWidth(13), ViewWidth(30));
-    if (_index == 1) {
-        _rightImageView.frame = CGRectMake(0, 0, 0, 0);
-    }
+    _rightImageView.frame = CGRectMake(ScreenWidth() - ViewWidth(50) , MaxY(self.contentView)/2 - ViewWidth(15), ViewWidth(13), ViewWidth(30));
+    
     _downLineView.frame = CGRectMake(ViewFrameOriginX,MaxY(_titleLabel)  + ViewWidth(9) , ScreenWidth() - ViewWidth(68), ViewWidth(1));
 }
 

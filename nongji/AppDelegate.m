@@ -27,7 +27,7 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"userID"]) {
+    if (!GETUSERID) {
          self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [[LoginViewController alloc] init]];
     }else{
         self.window.rootViewController = [[NJTabbarViewController alloc] init];

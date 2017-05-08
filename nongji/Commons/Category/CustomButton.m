@@ -19,11 +19,11 @@ UIView *_view;
         _view.backgroundColor = UIColorFromRGB(0x333333);
     }
     if (selected) {
-        [self setTitleColor:UIColorFromRGB(0x333333) forState:UIControlStateSelected];
-        [self addSubview:_view];
+        [self setTitleColor:UIColorFromRGB(0x1784CA) forState:UIControlStateSelected];
+//        [self addSubview:_view];
     }else{
-        [_view removeFromSuperview];
-        [self setTitleColor:UIColorFromRGB(0xeeeeee) forState:UIControlStateNormal];
+//        [_view removeFromSuperview];
+        [self setTitleColor:UIColorFromRGB(0x646464) forState:UIControlStateNormal];
         
     }
 }

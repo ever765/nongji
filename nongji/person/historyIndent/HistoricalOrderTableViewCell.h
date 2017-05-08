@@ -10,4 +10,5 @@
 
 @interface HistoricalOrderTableViewCell : UITableViewCell
 @property (nonatomic, strong)NSDictionary *dict;
+
 @end

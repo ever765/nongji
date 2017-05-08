@@ -9,19 +9,19 @@
 #import "NSString+Common.h"
 
 @implementation NSString (Common)
-//注册密码   是:yes  否:no
+//注册密码   空:yes  否:no
 + (BOOL)stringIsNil:(NSString *)str withViewController:(UIViewController *)viewController withMessage:(NSString *)message
 {
     if (str.length == 0) {
         if (message) {
             [self message:message withController:viewController];
         }
-        return NO;
+        return YES;
     }
-    return YES;
+    return NO;
 }
 
-//是否身份证号   是：yes 否：no
+//是否身份证号   是：no 否：yes
 /*
  15位数身份证验证正则表达式：
  isIDCard1=/^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/;
@@ -33,7 +33,7 @@
 +(BOOL)stringIsIdentity:(NSString *)str withViewController:(UIViewController *)viewController
 {
     if ([self stringIsNil:str withViewController:viewController withMessage:@"身份证输入不能为空"]) {
-        return NO;
+        return YES;
     }
     
     NSString *regex;
@@ -49,9 +49,9 @@
     BOOL isMatch = [pred evaluateWithObject:str];
     if (!isMatch) {
         [self message:@"身份证号输入有误" withController:viewController];
-        return NO;
+        return YES;
     }
-    return YES;
+    return NO;
 }
 //检查用户是否为手机号注册
 /**
@@ -68,12 +68,12 @@
  *               <p>
  *               电信的号段：133、153、180（未启用）、189
  *               </p>
- * @return 验证成功返回true，验证失败返回false
+ * @return 验证成功返回false，验证失败返回true
  */
 + (BOOL)stringIsLoginUser:(NSString *)str withViewController:(UIViewController *)viewController
 {
     if ([self stringIsNil:str withViewController:viewController withMessage:@"手机号不能为空"]) {
-        return NO;
+        return YES;
     }
     NSString *regex = @"(\\+\\d+)?1[34578]\\d{9}$";
     
@@ -82,16 +82,16 @@
     BOOL isMatch = [pred evaluateWithObject:str];
     if (!isMatch) {
         [self message:@"手机号输入格式错误" withController:viewController];
-        return NO;
+        return YES;
     }
 
-    return YES;
+    return NO;
 }
-//登录密码
+//登录密码  正确返回no    不正确返回yes
 + (BOOL)stringIsLoginPassWord:(NSString *)str withViewController:(UIViewController *)viewController
 {
     if ([self stringIsNil:str withViewController:viewController withMessage:@"密码不能为空"]) {
-        return NO;
+        return YES;
     }
     NSString *regex = @"(?=.*?[a-zA-Z])(?=.*?[0-9])[a-zA-Z0-9]{6,}$";
     
@@ -100,21 +100,21 @@
     BOOL isMatch = [pred evaluateWithObject:str];
     if (!isMatch) {
         [self message:@"密码格式不正确" withController:viewController];
-        return NO;
+        return YES;
     }
-    return YES;
+    return NO;
 }
-//检测是支付密码
+//检测是支付密码  正确返回no    不正确返回yes
 + (BOOL)stringPayPassword:(NSString *)str withViewController:(UIViewController *)viewController
 {
-    if ([self stringIsNil:str withViewController:viewController withMessage:@"支付密码为空"]) {
-        return NO;
+    if ([self stringIsNil:str withViewController:viewController withMessage:@"验证码为空"]) {
+        return YES;
     }
     if (str.length != 6) {
-        [self message:@"请输入完整的支付密码" withController:viewController];
-        return NO;
+        [self message:@"请输入完整的验证码" withController:viewController];
+        return YES;
     }
-    return YES;
+    return NO;
 }
 /**
  *  弹窗提示
@@ -125,15 +125,9 @@
  */
 + (void)message:(NSString *)str withController:(UIViewController *)viewController
 {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:str preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        
-    }]];
-    [viewController presentViewController:alert animated:YES completion:^{
-        
-    }];
-    
+    [viewController showHint:str];
 }
+
 //MD5加密  xiucai   需求前面添加4个0再进行加密
 NSString * MD5Hash(NSString *aString) {
     NSString *str = [NSString stringWithFormat:@"0000%@",aString];

@@ -20,7 +20,6 @@
     UIButton *_agreeButton;
     UILabel *_agreeLabel;
     
-    
     BOOL _isAgree;
     NsTime *_timer;//倒计时
     
@@ -183,7 +182,34 @@
         }
         isback = !isback;
     }else if ([button.currentTitle isEqualToString:@"注册"]){
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        if ([NSString stringIsLoginUser:_phoneTextField.text withViewController:self]) {
+            return;
+        }
+        if ([NSString stringPayPassword:_verificationTextField.text withViewController:self]) {
+            return;
+        }
+        if ([NSString stringIsLoginPassWord:_passwordTextField.text withViewController:self]) {
+            return;
+        }
+        if (![_passwordTextField.text isEqualToString:_passwordTTextField.text]) {
+            [self showHint:@"二次密码输入不一致"];
+            return;
+        }
+        if (!_isAgree) {
+            [self showHint:@"必须统一协议才能注册"];
+            return;
+        }
+        
+        [API requestVerificationAFURL:[NSString stringWithFormat:@"%@farmer/register",NONGJIURL] httpMethod:METHOD_POST  parameters:@{@"loginName":_phoneTextField.text,@"password":_passwordTextField.text} Authorization:nil viewController:self succeed:^(id responseObject) {
+            if (responseObject) {
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            }
+            
+        } failure:^(NSError *error) {
+            
+        }];
+        
+      
     }
     
 }

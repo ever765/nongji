@@ -11,8 +11,9 @@
 
 #import "UIView+Common.h"
 #import "MyTools.h"
+#import "API.h"
 #import "NSString+Common.h"
-
+#import "UIViewController+HUD.h"
 
 
 //百度地图Key
@@ -30,6 +31,7 @@
 #define mainFontBlack UIColorFromRGB(0x333333)
 //根据内容  字体大小。计算label的size
 #define LabelSize(content,fontSize) [content sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:fontSize],NSFontAttributeName,nil]]
+
 #define MoreLineLabelSize(content,width,fontSize)  [content boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]} context:nil].size;
 //主题vc背景色浅灰色
 #define mainBlackgroundColor  UIColorFromRGB(0xeeeeee)
@@ -39,6 +41,23 @@
 //分割线颜色
 #define LINECOLOR UIColorFromRGB(0xeeeeee)
 
+/***
+ *1   吕建辉   测试环境
+ *
+ ***/
+
+#define ISTEST 1
+
+#if ISTEST//测试
+
+
+#define NONGJIURL  @"http://192.168.1.162:8080/api/"
+
+#else//正式
+
+#define NONGJIURL @""
+
+#endif
 
 //#pragma mark 据说此方法真机不打印nslog 调试打印节省性能
 //#ifdef DEBUG
@@ -49,6 +68,8 @@
 #define PUSH     [self.navigationController pushViewController:vc animated:YES];
 //16进制转换rgb
 #define UIColorFromRGB(rgbValue) [[UIColor alloc] initWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue &0xFF00) >>8))/255.0 blue:((float)(rgbValue &0xFF))/255.0 alpha:1.0]
+#define GETUSERID [[NSUserDefaults standardUserDefaults] objectForKey:@"userId"]
 
+#define SETUSERID(id) [[NSUserDefaults standardUserDefaults] setObject:id forKey:@"userId"];
 
 #endif /* PrefixHeader_pch */

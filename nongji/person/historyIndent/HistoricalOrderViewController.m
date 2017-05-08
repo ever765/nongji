@@ -15,6 +15,7 @@
 {
     CustomButton *_lastButton;
     NSMutableArray *_dataSource;
+    NSInteger _pages;
 }
 @end
 
@@ -25,7 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createHeaderView];
-    [self registerCellID];
+    self.supportPullUpRefresh = YES;
+    self.supportPullDownRefresh = YES;
+    [self pullDownRefreshData];
     // Do any additional setup after loading the view.
 }
 - (void)createHeaderView{
@@ -37,27 +40,22 @@
     [headerView addSubview:allButton];
     [allButton setTitle:@"全部订单" forState:UIControlStateNormal];
     [allButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchDown];
-    [allButton setTitleColor:UIColorFromRGB(0xeeeeee) forState:UIControlStateNormal];
+    [allButton setTitleColor:UIColorFromRGB(0x646464) forState:UIControlStateNormal];
     _lastButton = allButton;
     _lastButton.selected = YES;
     
     CustomButton *abnormalButton = [CustomButton buttonWithType:UIButtonTypeCustom];
     abnormalButton.frame = CGRectMake(ScreenWidth()/2 +ViewFrameOriginX /2 , 0, ScreenWidth()/2  - ViewFrameOriginX *1.5, ViewWidth(78));
     [abnormalButton setTitle:@"异常订单" forState:UIControlStateNormal];
-    [abnormalButton setTitleColor:UIColorFromRGB(0xeeeeee) forState:UIControlStateNormal];
+    [abnormalButton setTitleColor:UIColorFromRGB(0x646464) forState:UIControlStateNormal];
     [abnormalButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchDown];
     [headerView addSubview:abnormalButton];
     [self.view addSubview:headerView];
+  
 }
 
 - (CGFloat)tableViewOriginY{
     return 64 + ViewWidth(78);
-}
-
--(void)registerCellID{
-//    self.frame = CGRectMake(0, ViewWidth(100) + 64, ScreenWidth(), ScreenHeight() - 64 - ViewWidth(100));
-    //    _tableView.backgroundColor = UIColorFromRGB(0xeeeeee);
-    [self.tableView registerClass:[HistoricalOrderTableViewCell class] forCellReuseIdentifier:@"HistoricalOrderTableViewCell_ID"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -79,6 +77,49 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+#pragma mark ---- 设置tableview
+- (void)pullDownRefreshData{
+    [_dataSource removeAllObjects];
+    _pages = 1;
+    NSString *url = [NSString stringWithFormat:@"%@farmer/orders?page=%ld&rows=20&userId=%@&state=%@",NONGJIURL,_pages,GETUSERID,@"1"];
+    [API requestVerificationAFURL:url httpMethod:METHOD_GET parameters:nil Authorization:nil viewController:self succeed:^(id responseObject) {
+        if (responseObject) {
+            
+        }
+        [self finishPullDownRefresh:YES];
+    } failure:^(NSError *error) {
+        [self finishPullDownRefresh:YES];
+    }];
+    
+    
+}
+
+- (void)pullUpRefreshData{
+    NSString *url;
+    _pages++;
+    url = [NSString stringWithFormat:@"%@farmer/orders?page=%ld&rows=20&userId=%@&state=%@",NONGJIURL,_pages,GETUSERID,@"1"];
+    [API requestVerificationAFURL:url httpMethod:METHOD_GET parameters:nil Authorization:nil viewController:self succeed:^(id responseObject) {
+        if (responseObject) {
+            _dataSource = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+            NSLog(@"%@",_dataSource);
+        }
+        [self finishPullUpRefresh:YES hasMore:YES];
+    } failure:^(NSError *error) {
+        [self finishPullUpRefresh:YES hasMore:YES];
+    }];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+   
+}
+
+- (void)finishPullDownRefresh:(BOOL)succeed{
+    [super finishPullDownRefresh:succeed];
+}
+
+- (void)finishPullUpRefresh:(BOOL)succeed hasMore:(BOOL)hasMore{
+    [super finishPullUpRefresh:succeed hasMore:hasMore];
 }
 
 - (void)buttonAction:(UIButton *)button{

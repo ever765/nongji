@@ -16,6 +16,7 @@
     UILabel *_titleLabel;
     UIImageView *_rightImageView;
     UIView *_downLineView;
+    NSInteger _section;
 }
 
 @end
@@ -42,25 +43,53 @@
     [self.contentView addSubview:_downLineView];
 }
 
-- (void)drewContentViewWithIndexPathRRow:(NSInteger)index{
-    NSArray *titleArray = @[@"个人资料",@"支出中心",@"历史订单",@"设置"];
-    NSArray *imageNameS = @[@"ic_action_collection",@"ic_action_collection",@"ic_action_collection",@"ic_action_collection"];
-    _imageView.image = [UIImage imageNamed:imageNameS[index>imageNameS.count?0:index]];
-    _titleLabel.text = titleArray[index>titleArray.count?0:index];
+- (void)drewContentViewWithIndexPathRRow:(NSInteger)index andsection:(NSInteger)section{
+    _section = section;
+    if (section == 0) {
+        _imageView.image = [UIImage imageNamed:@"ic_ation_user"];
+        _titleLabel.text = @"个人资料";
+    }else if (section == 1){
+        _imageView.image = [UIImage imageNamed:@"ic_ation_user"];
+        _titleLabel.text = @"实名认证";
+    }else if (section == 2){
+        switch (index) {
+            case 0:
+                _imageView.image = [UIImage imageNamed:@"ic_action_record"];
+                 _titleLabel.text = @"支出中心";
+                break;
+            case 1:
+                _imageView.image = [UIImage imageNamed:@"ic_action_record"];
+                 _titleLabel.text = @"历史订单";
+                break;
+            case 2:
+                _imageView.image = [UIImage imageNamed:@"ic_action_setting"];
+                 _titleLabel.text = @"设置";
+                break;
+            default:
+                break;
+        }
+       
+    }
+    
+
     _rightImageView.image = [UIImage imageNamed:@"ic_right"];
 }
 
 -(void)layoutSubviews{
     [super layoutSubviews];
     
-    _imageView.frame = CGRectMake(ViewFrameOriginX, ViewWidth(50), ViewWidth(60), ViewWidth(60));
+    _imageView.frame = CGRectMake(ViewFrameOriginX, ViewWidth(10), ViewWidth(60), ViewWidth(60));
     
     CGSize size = LabelSize(_titleLabel.text, titleFontSize);
-    _titleLabel.frame = CGRectMake(MaxX(_imageView)  + ViewWidth(20), MaxY(_imageView) - size.height, size.width, size.height);
     
-    _rightImageView.frame = CGRectMake(ScreenWidth() - ViewWidth(50) , MaxY(_imageView) - ViewWidth(30), ViewWidth(13), ViewWidth(30));
+    _titleLabel.frame = CGRectMake(MaxX(_imageView)  + ViewWidth(20), _imageView.center.y - size.height/2, size.width, size.height);
     
-    _downLineView.frame = CGRectMake(ViewFrameOriginX,MaxY(_imageView)  + ViewWidth(10) , ScreenWidth() - ViewWidth(118), ViewWidth(1));
+    _rightImageView.frame = CGRectMake(ScreenWidth() - ViewWidth(50) , _imageView.center.y - ViewWidth(15), ViewWidth(13), ViewWidth(30));
+    
+    if (_section == 2) {
+        _downLineView.frame = CGRectMake(ViewFrameOriginX,MaxY(_imageView)  + ViewWidth(10) , ScreenWidth() - ViewWidth(118), ViewWidth(1));
+    }
+    
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

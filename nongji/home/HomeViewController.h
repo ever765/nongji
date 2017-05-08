@@ -2,12 +2,12 @@
 //  HomeViewController.h
 //  nongji
 //
-//  Created by Cus on 2017/4/19.
+//  Created by tobo on 17/4/24.
 //  Copyright © 2017年 WDX. All rights reserved.
 //
 
-#import "NJAppViewController.h"
+#import "NJBaseTableViewController.h"
 
-@interface HomeViewController : NJAppViewController
+@interface HomeViewController : NJBaseTableViewController
 
 @end

@@ -12,6 +12,7 @@
 {
     UITextField *_passwordTextField;//密码
     UITextField *_confirmPasseordTextField;//确认密码
+  
 }
 @end
 
@@ -21,6 +22,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+     
     [self initView];
     // Do any additional setup after loading the view.
 }

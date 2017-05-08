@@ -89,6 +89,9 @@
             [weakSelf refreshUISecond:second];
         }];
     }else{
+        
+        
+        
         ChangePasswordViewController *vc = [[ChangePasswordViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }

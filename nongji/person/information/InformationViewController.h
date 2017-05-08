@@ -10,4 +10,6 @@
 
 @interface InformationViewController : NJBaseTableViewController
 
+@property (nonatomic, strong)NSDictionary *dataSource;
+
 @end

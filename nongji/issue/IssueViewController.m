@@ -39,7 +39,7 @@
 
 - (void)initData{
     
-    _cellTitleLableArray = @[@"必填项",@"作业地点",@"详细地址",@"耕作面积",@"农作物",@"作业时间",@"服务类型",@"选填项",@"理想报价",@"描述"];
+    _cellTitleLableArray = @[@"必填项",@"姓名",@"联系电话",@"作业地点",@"详细地址",@"耕作面积",@"农作物",@"作业时间",@"服务类型",@"选填项",@"理想报价",@"描述"];
     _dataSource = [NSMutableDictionary new];
 }
 
@@ -62,7 +62,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.row == 9) {
+    if (indexPath.row == 11) {
        return ScreenWidth()/2   + ViewWidth(88);
     }
    return ViewWidth(88);
@@ -82,13 +82,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 4) {
+    if (indexPath.row == 6) {
         NSArray *slectArray= @[@"小麦",@"玉米",@"水稻",@"其他"];
         SIActionSheet* actionSheet = [[SIActionSheet alloc] initWithCancelButonTitle:@"取消" otherButtonTitles:slectArray delegate:self];
         actionSheet.tag = 50+indexPath.row;
         actionSheet.delegate = self;
         [actionSheet show];
-    }else if (indexPath.row == 6){
+    }else if (indexPath.row == 8){
         NSArray *slectArray= @[@"水产运输",@"水稻运输"];
         SIActionSheet* actionSheet = [[SIActionSheet alloc] initWithCancelButonTitle:@"取消" otherButtonTitles:slectArray delegate:self];
         actionSheet.tag = 50+indexPath.row;
@@ -98,15 +98,15 @@
 }
 
 - (void)addDateFromDict{
-    NSArray *array = @[@"",@"作业地点",@"地址详情",@"耕地面积",@"农作物",@"作业时间",@"服务类型",@"",@"理想报价",@"描述"];
+    NSArray *array = @[@"",@"contactName",@"contactPhone",@"place",@"address",@"area",@"crops",@"worktime",@"servetype",@"",@"farmerPrice",@"descs"];
     for (NSInteger i= 0; i < _cellTitleLableArray.count; i++) {
         
-        if (i==0 || i== 7) {
+        if (i==0 || i== 9) {
             continue;
         }
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
         IssueTableViewCell *cell = (IssueTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-        if (i == 9) {
+        if (i == 11) {
               [_dataSource setValue:cell.textView.text forKey:array[i]];
             continue;
         }
@@ -119,7 +119,7 @@
 
 -(void)actionSheet:(SIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex withTitle:(NSString *)title{
     
-    if (actionSheet.tag ==54 || actionSheet.tag ==56 ||actionSheet.tag ==57) {
+    if (actionSheet.tag ==56 || actionSheet.tag ==58 ||actionSheet.tag ==59) {
         NSIndexPath *indexPath  = [NSIndexPath indexPathForRow:actionSheet.tag-50 inSection:0];
         IssueTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
         cell.textField.text = title;
@@ -129,6 +129,14 @@
 
 - (void)buttonAction:(UIButton *)button{
     [self addDateFromDict];
+    [_dataSource setValue:GETUSERID forKey:@"userId"];
+    [API requestVerificationAFURL:[NSString stringWithFormat:@"%@farmer/order/create",NONGJIURL] httpMethod:METHOD_POST parameters:_dataSource Authorization:nil viewController:self succeed:^(id responseObject) {
+        if (responseObject) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    } failure:^(NSError *error) {
+        
+    }];
     NSLog(@"发布 %@",_dataSource);
 }
 

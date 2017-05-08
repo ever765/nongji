@@ -9,5 +9,5 @@
 #import "NJBaseTableViewController.h"
 
 @interface SetPasswordViewController : NJBaseTableViewController
-
+@property (nonatomic, strong)NSString *longinName;
 @end

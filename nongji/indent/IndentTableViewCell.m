@@ -97,11 +97,13 @@
     size = LabelSize(_nameLabel.text, titleFontSize - 2);
     _nameLabel.frame = CGRectMake(MaxX(_label1) +ViewWidth(20), ViewWidth(20), size.width, size.height);
     
-    size = LabelSize(_label3.text, titleFontSize - 2);
-    _label3.frame = CGRectMake(ScreenWidth() - ViewFrameOriginX - size.width, ViewWidth(20), size.width >size.height?size.width:size.height , size.height);
+    if (_status == IndentStatusStay) {
+        size = LabelSize(_label3.text, titleFontSize - 2);
+        _label3.frame = CGRectMake(ScreenWidth() - ViewFrameOriginX - size.width, ViewWidth(20), size.width >size.height?size.width:size.height , size.height);
+    }
     
     size = LabelSize(_phoneLabel.text, titleFontSize - 2);
-    _phoneLabel.frame = CGRectMake(MinX(_label3) - size.width - ViewWidth(20), ViewWidth(20), size.width, size.height);
+    _phoneLabel.frame = CGRectMake(MinX(_label3) ? MinX(_label3) - size.width - ViewWidth(20) :ScreenWidth() - ViewFrameOriginX  - size.width - ViewWidth(20), ViewWidth(20), size.width, size.height);
     
     size = LabelSize(_label2.text, titleFontSize - 2);
     _label2.frame = CGRectMake(MinX(_phoneLabel) - size.width - ViewWidth(20), ViewWidth(20), size.width , size.height);

@@ -89,7 +89,21 @@
     return ViewWidth(88);
 }
 - (void)buttonAction:(UIButton *)button{
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    if ([NSString stringIsLoginPassWord:_passwordTextField.text withViewController:self]) {
+        return;
+    }
+    if (![_passwordTextField.text isEqualToString:_passwordTTextField.text]) {
+        [self showHint:@"二次密码输入不一致"];
+        return;
+    }
+    [API requestVerificationAFURL:[NSString stringWithFormat:@"%@user/modify/password",NONGJIURL] httpMethod:METHOD_POST  parameters:@{@"loginName":_longinName,@"password":_passwordTextField.text} Authorization:nil viewController:self succeed:^(id responseObject) {
+        if (responseObject) {
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+        
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

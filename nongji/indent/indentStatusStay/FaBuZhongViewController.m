@@ -46,7 +46,7 @@
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 4 || indexPath.row == 8){
+    if (indexPath.row == 3 || indexPath.row == 8){
         return ViewWidth(150);
     }
     return ViewWidth(88);

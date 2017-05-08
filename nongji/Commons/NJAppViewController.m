@@ -155,7 +155,7 @@
     // 右侧按钮
     [self _configNavRightButton];
     //底部分割条
-    [self _configNavDownLineView];
+//    [self _configNavDownLineView];
 }
 
 - (void)_configNavDownLineView{

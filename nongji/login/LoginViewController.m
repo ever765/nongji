@@ -113,9 +113,29 @@
 
 - (void)buttonAction:(UIButton *)button{
     if ([button.currentTitle isEqualToString:@"登录"]) {
-        AppDelegate *delegate = (id)[UIApplication sharedApplication].delegate;
-        UIWindow *keyWindow=delegate.window;
-        keyWindow.rootViewController = [[NJTabbarViewController alloc] init];
+        if ([NSString stringIsLoginUser:_phoneField.text withViewController:self]) {
+            return;
+        }
+        
+        if ([NSString stringIsLoginPassWord:_passwordField.text withViewController:self]) {
+            return;
+        }
+        
+        [API requestVerificationAFURL:[NSString stringWithFormat:@"%@farmer/login",NONGJIURL] httpMethod:METHOD_POST  parameters:@{@"loginName":_phoneField.text,@"password":_passwordField.text} Authorization:nil viewController:self succeed:^(id responseObject) {
+            if (responseObject) {
+                NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+                SETUSERID(dict[@"message"][@"id"]);
+                AppDelegate *delegate = (id)[UIApplication sharedApplication].delegate;
+                UIWindow *keyWindow=delegate.window;
+                keyWindow.rootViewController = [[NJTabbarViewController alloc] init];
+            }
+           
+        } failure:^(NSError *error) {
+            
+        }];
+        
+        
+        
     }else if ([button.currentTitle isEqualToString:@"注册"]){
         RegisterViewController *vc = [[RegisterViewController  alloc] init];
         [self.navigationController pushViewController:vc animated:YES];

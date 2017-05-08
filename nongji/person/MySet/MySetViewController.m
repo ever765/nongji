@@ -24,6 +24,7 @@
 }
 - (void)registerCellID{
     self.tableView.bounces = NO;
+    self.tableView.backgroundColor = UIColorFromRGB(0xeeeeeee);
     [self.tableView registerClass:[MySetTableViewCell class] forCellReuseIdentifier:@"MySetTableViewCell_Id"];
 }
 - (void)didReceiveMemoryWarning {

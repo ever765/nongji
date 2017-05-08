@@ -32,7 +32,7 @@
     _textField.font = [UIFont systemFontOfSize:titleFontSize - 2];
     _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     [self addSubview:_textField];
-    if (indexRow == 1 || indexRow == 4 || indexRow == 5 || indexRow == 6) {
+    if (indexRow == 3 || indexRow == 6 || indexRow == 7 || indexRow == 8) {
         _rightImgView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ic_right"]];
         _rightImgView.frame = CGRectMake(ScreenWidth() - ViewFrameOriginX - ViewWidth(13), ViewWidth(20), ViewWidth(13), ViewWidth(30));
         [self.contentView addSubview:_rightImgView];
@@ -44,8 +44,8 @@
     
     _textView = [[UITextView alloc] init];
     [self.contentView addSubview:_textView];
-  
-  
+    
+    
     [self.contentView addSubview:_downLineView];
 }
 
@@ -63,45 +63,55 @@
             break;
         case 1:
         {
-            _textField.text = @"江苏南京市江宁区";
-            _textField.enabled = NO;
+            _textField.placeholder = @"请填写姓名";
         }
             break;
         case 2:
         {
-            _textField.placeholder = @"请填写具体乡镇地址";
+            _textField.placeholder = @"请填写手机号";
         }
             break;
         case 3:
         {
-            _textField.placeholder = @"请输入耕地面积";
+            _textField.text = @"江苏南京市江宁区";
+            _textField.enabled = NO;
         }
             break;
         case 4:
         {
-            _textField.enabled = NO;
-            _textField.placeholder = @"请选择农作物";
+            _textField.placeholder = @"请填写具体乡镇地址";
         }
             break;
         case 5:
         {
-            _textField.enabled = NO;
-            _textField.placeholder = @"请输入需求开始时间";
+            _textField.placeholder = @"请输入耕地面积";
         }
             break;
         case 6:
         {
             _textField.enabled = NO;
-            _textField.placeholder = @"请选择服务类型";
+            _textField.placeholder = @"请选择农作物";
         }
             break;
         case 7:
         {
             _textField.enabled = NO;
-            _titleLable.font  = [UIFont boldSystemFontOfSize:titleFontSize];
+            _textField.placeholder = @"请输入需求开始时间";
         }
             break;
         case 8:
+        {
+            _textField.enabled = NO;
+            _textField.placeholder = @"请选择服务类型";
+        }
+            break;
+        case 9:
+        {
+            _textField.enabled = NO;
+            _titleLable.font  = [UIFont boldSystemFontOfSize:titleFontSize];
+        }
+            break;
+        case 10:
         {
             _textField.placeholder = @"请输入理想报价";
         }
@@ -118,22 +128,22 @@
     size = LabelSize(@"请填写具体乡镇地址浏览", titleFontSize);
     _textField.frame = CGRectMake(ScreenWidth() - ViewFrameOriginX * 2 - size.width , ViewWidth(20), size.width, size.height);
     
-      NSString *rightLableText = indexRow==3?@"(亩)":@"(元/亩)";
-    if (indexRow == 3 || indexRow == 8) {
+    NSString *rightLableText = indexRow==3?@"(亩)":@"(元/亩)";
+    if (indexRow == 5 || indexRow == 10) {
         _rightLabel = [MyTools lableWithtextColor:UIColorFromRGB(0x333333) textFont:[UIFont systemFontOfSize:titleFontSize - 2] inSize:CGSizeZero withText:rightLableText];
         CGSize size = LabelSize(_rightLabel.text, titleFontSize );
         _rightLabel.frame = CGRectMake(ScreenWidth() - ViewFrameOriginX - size.width, ViewWidth(20), size.width, size.height);
         [self.contentView addSubview:_rightLabel];
         _textField.frame = CGRectMake(MinX(_textField) , ViewWidth(20), viewWidth(_textField) - size.width, size.height);
-    }else if (indexRow == 9){
+    }else if (indexRow == 11){
         _textView.frame = CGRectMake(ViewFrameOriginX * 2, MaxY(_titleLable) + ViewWidth(40), ScreenWidth() - 4 * ViewFrameOriginX, (ScreenWidth() - 4 * ViewFrameOriginX)  / 2);
         _textView.layer.borderColor = UIColorFromRGB(0xcccccc).CGColor;
         _textView.layer.borderWidth = ViewWidth(2);
     }
-    if (indexRow ==0 || indexRow == 7) {
+    if (indexRow ==0 || indexRow == 9) {
         _downLineView.backgroundColor = UIColorFromRGB(0xcccccc);
         _downLineView.frame = CGRectMake(ViewFrameOriginX - ViewWidth(20), MaxY(self.contentView) - ViewWidth(2), ScreenWidth() - ViewFrameOriginX, ViewWidth(2));
-    }else if(indexRow == 9){
+    }else if(indexRow == 11){
         _downLineView.backgroundColor = LINECOLOR;
         _downLineView.frame = CGRectMake(ViewFrameOriginX, MaxY(_textView) + ViewWidth(20), ScreenWidth() - ViewFrameOriginX, ViewWidth(1));
     }else{

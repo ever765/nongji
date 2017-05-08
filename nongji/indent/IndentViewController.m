@@ -11,9 +11,11 @@
 #import "IndentTableViewCell.h"
 #import "WorkingViewController.h"
 #include "IndentFinishViewController.h"
+#import <MJRefresh.h>
 @interface IndentViewController ()
 {
     NSMutableArray *_dataSource;
+    NSInteger _LodingType;
 }
 @end
 
@@ -41,6 +43,8 @@
         button.backgroundColor = UIColorFromRGB(0xeeeeee);
         button.titleLabel.font = [UIFont systemFontOfSize:titleFontSize];
         button.layer.borderWidth = 1;
+        button.tag = i;
+        [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchDown];
         button.layer.borderColor = UIColorFromRGB(0xcccccc).CGColor;
         [self.view addSubview:button];
     }
@@ -48,6 +52,8 @@
     self.supportPullDownRefresh = YES;
     
 }
+
+
 
 - (void)registerCellID{
     [self.tableView registerClass:[IndentTableViewCell class] forCellReuseIdentifier:@"IndentTableViewCell_Id"];
@@ -62,19 +68,22 @@
     if (!cell) {
         cell = [[IndentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"IndentTableViewCell_Id"];
     }
-    cell.status = arc4random()%3;
+    cell.status = _LodingType?_LodingType:0;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (_LodingType > 0) {
+        return ViewWidth(150);
+    }
     return ViewWidth(200);
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 1) {
+    if (_LodingType == 1) {
         WorkingViewController *vc = [[WorkingViewController alloc] init];
         PUSH
-    }else if(indexPath.row == 0){
+    }else if(_LodingType == 2){
         IndentFinishViewController *vc = [[IndentFinishViewController alloc] init];
         PUSH
     }else{
@@ -93,6 +102,7 @@
 - (void)pullDownRefreshData{
     NSLog(@"下啦刷新");
     sleep(2);
+    [self.tableView reloadData];
     [self finishPullDownRefresh:YES];
 }
 
@@ -101,6 +111,11 @@
     sleep(2);
     [self finishPullUpRefresh:YES hasMore:YES];
     
+}
+
+- (void)buttonAction:(UIButton *)button{
+    _LodingType = button.tag;
+    [self.tableView.mj_header beginRefreshing];
 }
 
 - (void)finishPullDownRefresh:(BOOL)succeed{

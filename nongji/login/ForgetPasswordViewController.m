@@ -24,7 +24,7 @@
 @implementation ForgetPasswordViewController
 
 - (NSString *)navigationTitleText{
-    return @"注册";
+    return @"忘记密码";
 }
 
 - (CGFloat)tableViewBottomPadding{
@@ -125,7 +125,15 @@
             [weakSelf refreshUISecond:second];
         }];
     }else if ([button.currentTitle isEqualToString:@"下一步"]){
+        
+        if ([NSString stringIsLoginUser:_phoneTextField.text withViewController:self]) {
+            return;
+        }
+        if ([NSString stringPayPassword:_verificationTextField.text withViewController:self]) {
+            return;
+        }
         SetPasswordViewController *vc = [[SetPasswordViewController alloc] init];
+        vc.longinName = _phoneTextField.text;
         PUSH;
     }
     
